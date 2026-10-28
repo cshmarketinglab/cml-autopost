@@ -1,0 +1,90 @@
+# ─────────────────────────────────────────────
+# CML 자동 발행 설정 — 여기만 고치면 동작이 바뀜
+# ─────────────────────────────────────────────
+
+model: claude-sonnet-5-5        # 품질 올리고 싶으면 claude-opus-5-5 (비용 약 2.5배)
+
+# 검수 모드: false = 매일 GitHub 이슈로 초안 받고 /approve 해야 발행
+#            true  = 생성 즉시 예약 시간에 자동 발행
+auto_approve: false
+
+# ── 발행 시간 (한국시간 HH:MM) ──
+# GitHub Actions 예약 실행은 수 분~30분 정도 늦게 돌 수 있음
+# ⚠️ 시간을 바꾸면 .github/workflows/publish.yml 의 cron 시간도 같이 바꿔야 함 (UTC = 한국시간 - 9)
+threads_slots:
+  - { slot: morning, time: "08:10" }
+  - { slot: noon,    time: "12:20" }
+  - { slot: evening, time: "20:40" }
+recruit_slot: noon               # 모집글이 들어갈 슬롯
+recruit_every_n_days: 1          # 1 = 매일 모집글 1개 / 2 = 이틀에 한 번 (나머지 날은 공감글)
+
+carousel_time: "19:10"
+
+carousel_every_n_days: 2
+carousel_anchor_date: "2026-10-28"   # 이 날짜부터 n일 간격으로 캐러셀 생성
+
+# ── 캐러셀 디자인 ──
+design:
+  # 로고 이미지: templates/logo/ (mark=CML. / full=CML.+영문명, white=어두운 배경용, black=밝은 배경용)
+  cover_label: MARKETING CLASS           # 표지 우상단
+  insight_label: 오늘의 숙제               # 마지막 본문(밝은 장) 라벨
+  series: "동네 가게 마케팅 수업 {n}교시"   # 표지 제목 위 시리즈 라벨. {n} = 회차 자동 증가
+  series_start: 1                        # 첫 회차 번호
+  outro:                                 # 마지막 장 CTA
+    headline: 다음 교시도 놓치지 않게
+    buttons:                             # 첫 버튼이 강조(흰 배경). icon: save / follow / like / share
+      - { icon: save, label: 저장 }
+      - { icon: follow, label: 팔로우 }
+    note: 무료 플레이스 진단 → @cml.place 프로필 링크
+  photo_credit_in_caption: true          # 캡션 끝에 "Photos via Pexels" 표기 (Pexels 권장사항)
+  # 검색 결과가 없을 때 쓸 예비 검색어
+  photo_fallbacks: ["small cafe interior", "restaurant owner", "shop counter warm light", "empty restaurant tables"]
+
+# ── 브랜드 정보 (모집글·캐러셀 마지막 장에 사용) ──
+brand:
+  name: 전수혁 마케팅랩
+  short: CML
+  handle: "@cml.place"
+  copy_main: 숨기지 않는 마케팅
+  copy_sub: 사장님 가게의 성장 동반자
+  cta: 프로필 링크(홈페이지)에서 무료 플레이스 진단 신청
+  website: https://cmlab.netlify.app/
+  # 아래는 모집글 작성 시 Claude에게 주는 "사실" 목록. 여기 없는 실적·수치는 지어내지 않도록 프롬프트로 막혀 있음
+  facts:
+    - 양양 해변 상권에서 게스트하우스·식당·펍·카페 등 업장 9곳 마케팅을 현장에서 직접 맡았음
+    - 네이버 플레이스 전문. 자체 6단계 최적화 프로세스 NELVAR(Need-Explore-Listup-Verify-Action-Review/Share)로 진행, 세팅 4주
+    - 정기 관리 상품 새싹·줄기·열매 3단계 (새싹=월 4회 소식 작성+리뷰 답글 가이드+월간 통계+컨설팅, 줄기=플레이스 대리운영+A/B테스트+시즌 제안, 열매=플레이스 광고 운영+단골 재방문 설계)
+    - 강원도 야장·해변포차 키워드를 ChatGPT 검색 답변에 노출시킨 경험이 있음 (GEO, AI 검색 최적화)
+    - 무료 플레이스 진단 제공 (가게 네이버 플레이스를 보고 개선점 전달). 신청은 프로필 링크의 홈페이지에서
+    - 가격은 상담 시 안내
+
+# ── 콘텐츠 축 (Claude가 매일 여기서 골라 변주) ──
+empathy_pillars:
+  - 오픈 전 새벽 준비와 마감 후 정산의 피로
+  - 손님 없는 평일 오후의 불안
+  - 리뷰 하나에 하루 기분이 좌우되는 마음
+  - 알바·직원 구인과 갑작스러운 펑크
+  - 배달앱·플랫폼 수수료와 광고비 고민
+  - 비수기 매출 공백
+  - 마케팅 대행사에 돈 쓰고 결과 못 본 경험
+  - 사장 혼자 다 하는 멀티태스킹 (사진, SNS, 회계, 청소)
+  - 단골 손님이 주는 작은 위로
+  - 임대료·원자재 가격 인상
+  - 가족·지인의 "장사 잘 돼?" 질문
+  - 쉬는 날에도 가게 생각이 떠나지 않음
+
+carousel_topics:
+  - 네이버 플레이스 대표사진 고르는 기준
+  - 리뷰 답글 잘 쓰는 법 (악성 리뷰 포함)
+  - 플레이스 '소식' 탭 활용법
+  - 플레이스 키워드 설정 실수
+  - 영업시간·휴무 정보가 노출에 미치는 영향
+  - 메뉴판 사진과 설명 최적화
+  - 인스타 프로필 첫 화면 정리
+  - 단골을 만드는 재방문 장치
+  - 비수기에 해야 할 마케팅 준비
+  - ChatGPT 같은 AI 검색에 가게가 나오게 하는 기본
+  - 손님이 저장하고 싶은 게시물 만드는 법
+  - 체험단 운영 시 주의할 점
+  - 가게 소개 문구 쓰는 법
+  - 사진 한 장으로 분위기 전달하는 촬영 팁
