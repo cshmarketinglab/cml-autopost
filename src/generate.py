@@ -1,4 +1,5 @@
 """매일 아침 실행: 오늘 쓰레드 3개 + (해당일이면) 캐러셀 원고·이미지 생성 → queue/YYYY-MM-DD.json"""
+import os
 import sys
 from datetime import date
 from pathlib import Path
@@ -170,6 +171,10 @@ def main():
     write_json(qp, queue)
     write_json(HISTORY_FILE, history)
     print(f"생성 완료: {qp}")
+    out = os.environ.get("GITHUB_OUTPUT")
+    if out:  # 워크플로에 '새로 생성됨' 알림 → 이때만 검수 이슈 생성
+        with open(out, "a") as f:
+            f.write("generated=true\n")
 
 
 if __name__ == "__main__":
