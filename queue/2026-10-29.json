@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-29",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "empathy",
+      "publish_at": "2026-10-29T08:10:00+09:00",
+      "pillar": "직원 갑작스러운 펑크 연락과 혼자 메우는 사장의 하루",
+      "text": "출근 40분 전에 오는 문자\n\"사장님 죄송해요, 오늘 못 나가요\"\n\n그 순간 머릿속은 이렇게 돼.\n→ 내가 홀 보고\n→ 주방도 들어가고\n→ 설거지는 누가...\n\n화내기도 애매하잖아. 사정이 있겠지 싶어서.\n근데 그 말 삼키는 것도 일이더라.\n\n오늘도 혼자 메운 사장님, 고생했어.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-10-29T12:20:00+09:00",
+      "pillar": "내가 일하는 방식 소개: NELVAR 6단계와 4주 세팅",
+      "text": "플레이스 관리, 도대체 뭘 하는 건지 모호하지?\n\n나는 감으로 안 하고 순서대로 해.\nNELVAR, 6단계야.\nNeed → Explore → Listup → Verify → Action → Review/Share\n\n세팅은 4주.\n뭘 바꿨고 왜 바꿨는지 숨기지 않고 공유해.\n\n식당·카페·펍·숙소·미용실, 현장에서 직접 맡아본 방식이야.\n\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해 줘.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-10-29T20:40:00+09:00",
+      "pillar": "쉬는 날에도 가게 생각이 떠나지 않음",
+      "text": "쉬는 날인데 가게 앞을 지나가면 자꾸 안을 보게 돼.\n\n영화 보다가도 오늘 몇 팀 왔을까 폰 열어보고,\n가족이랑 밥 먹다가도 내일 발주가 떠오르고.\n\n몸은 쉬는데 머리는 출근 중인 거,\n사장님이면 다 알잖아.\n\n사장님은 쉬는 날 언제 제일 가게 생각 나?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": null
+}
