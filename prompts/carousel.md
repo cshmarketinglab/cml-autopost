@@ -15,7 +15,7 @@
   - body: 문단 2개(\n\n로 구분), 공백 포함 120~160자.
     둘 중 한 문단 안에 핵심 문장 하나를 **이렇게** 감싼다. 강조는 섹션당 정확히 1개, 한 문장 전체.
   - 마지막 section을 뺀 나머지: 각각 실행 가능한 팁 하나씩. 마지막 section: '오늘의 숙제' — 오늘 바로 해볼 행동 딱 하나를 정해주는 마무리.
-- 각 cover와 section에 photo_query: Pexels 검색용 영어 검색어 2~5단어.
+- 각 cover와 section에 photo_query: 무료 스톡 사진(Pixabay) 검색용 영어 검색어 2~5단어. 흔한 사물·장면 단어 위주(검색 결과가 많아야 고를 수 있음).
   - 그 장 내용을 상징하는 구체적인 장면. 예: "cafe owner wiping counter", "empty restaurant tables afternoon",
     "hand holding smartphone in cafe", "small bakery storefront night", "chef plating dish closeup"
   - 모든 검색어는 서로 다른 장면으로. 글자·간판·로고가 크게 보일 법한 장면은 피한다.
