@@ -87,7 +87,9 @@ def gen_carousel(cfg: dict, d: date, history: dict) -> dict:
     credits = []
     targets = [("cover", data["cover"], "portrait")] + [(f"s{i+1}", s, "landscape") for i, s in enumerate(data["sections"])]
     for name, block, orient in targets:
-        ph = fetch(block["photo_query"], src_dir / f"{name}.jpg", orient, used, ds["photo_fallbacks"])
+        ctx = (block.get("title") or block.get("heading", "")).replace("\n", " ") + "\n" + block.get("body", "").replace("**", "")
+        ph = fetch(block["photo_query"], src_dir / f"{name}.jpg", orient, used, ds["photo_fallbacks"],
+                   context=ctx, model=cfg["model"])
         block["photo"] = ph["path"] if ph else None
         if ph:
             credits.append({"slide": name, "id": ph["id"], "provider": ph["provider"], "photographer": ph["photographer"],
