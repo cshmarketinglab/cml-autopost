@@ -90,7 +90,7 @@ def gen_carousel(cfg: dict, d: date, history: dict) -> dict:
         ph = fetch(block["photo_query"], src_dir / f"{name}.jpg", orient, used, ds["photo_fallbacks"])
         block["photo"] = ph["path"] if ph else None
         if ph:
-            credits.append({"slide": name, "id": ph["id"], "photographer": ph["photographer"],
+            credits.append({"slide": name, "id": ph["id"], "provider": ph["provider"], "photographer": ph["photographer"],
                             "url": ph["url"], "query": ph["query"]})
 
     images, overflow = render_carousel(data, ds, img_dir)
@@ -98,7 +98,8 @@ def gen_carousel(cfg: dict, d: date, history: dict) -> dict:
 
     caption = data["caption"].strip()
     if ds.get("photo_credit_in_caption") and credits:
-        caption += "\n\nPhotos via Pexels"
+        names = sorted({c["provider"] for c in credits if c["provider"] != "mock"}) or ["stock"]
+        caption += "\n\nPhotos via " + " & ".join(names)
     for block in [data["cover"], *data["sections"]]:
         block.pop("photo", None)
     return {
