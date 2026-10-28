@@ -70,10 +70,11 @@ body {
 .polaroid .panel { padding-top: 30px; }
 
 /* ── 4. 인사이트 (밝은 배경) ── */
-.insight { background: var(--cream); color: var(--ink); }
-.insight .text p { color: var(--body-light); }
-.insight .text b { color: var(--ink); }
-.insight .foot { border-color: var(--line-light); }
+.light { background: var(--cream); color: var(--ink); }
+.light .text p { color: var(--body-light); }
+.light .text b { color: var(--ink); }
+.light .foot { border-color: var(--line-light); }
+.light.polaroid .frame { background: #fbfaf7; box-shadow: 0 24px 50px rgba(0,0,0,.22); }
 
 /* ── 5. 아웃트로 ── */
 .outro { background: #000; align-items: center; justify-content: center; text-align: center; }
