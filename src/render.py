@@ -4,10 +4,12 @@
   1      cover     전면 사진 + 하단 그라데이션 + 시리즈 라벨 + 큰 제목
   2      polaroid  기울어진 폴라로이드 사진 + 본문 (6번째 장도, 긴 캐러셀일 때)
   나머지  article   상단 사진 + 검정 패널 본문
-  n-1    insight   상단 사진 + 밝은 패널 (마무리 메시지)
+  n-1    article   마지막 본문은 '오늘의 숙제' 라벨
+  본문 배경: 표지 다음 장은 검정 고정, 나머지는 검정/베이지 50:50 무작위
   n      outro     검정 배경 워드마크
 """
 import html
+import random
 import re
 from pathlib import Path
 
@@ -88,19 +90,22 @@ def build_slides(doc: dict, design: dict) -> list[tuple[str, str]]:
       <div class='titles'><div class='kicker'>{_esc(doc['kicker'])}</div><h1>{title}</h1></div>"""))
 
     sections = doc["sections"]
+    # 본문 배경: 표지 다음 장은 항상 검정, 나머지는 검정/베이지 50:50 (같은 원고면 같은 결과)
+    rng = random.Random(doc.get("kicker", "") + doc["cover"].get("title", ""))
     for i, s in enumerate(sections):
-        text = f"<h2>{_esc(s['heading'])}</h2><div class='text'>{_paragraphs(s['body'])}</div>"
-        if i == len(sections) - 1:
-            slides.append(("article insight", f"""{_photo(s.get('photo'))}
-              <div class='panel'><div class='label spaced'>{_esc(design['insight_label'])}</div>{text}</div>{_foot(design, light=True)}"""))
-        elif i in (0, 4):  # 폴라로이드: 첫 팁 + 긴 캐러셀이면 5번째 팁
-            slides.append(("article polaroid", f"""
+        light = False if i == 0 else rng.random() < 0.5
+        theme = " light" if light else ""
+        label = (f"<div class='label spaced'>{_esc(design['insight_label'])}</div>"
+                 if i == len(sections) - 1 else "")
+        text = f"{label}<h2>{_esc(s['heading'])}</h2><div class='text'>{_paragraphs(s['body'])}</div>"
+        if i in (0, 4) and i != len(sections) - 1:  # 폴라로이드: 첫 팁 + 긴 캐러셀이면 5번째 팁
+            slides.append(("article polaroid" + theme, f"""
               <div class='stage'><div class='frame'>{_photo(s.get('photo'))}
                 {_logo('mark', 'black', 'sign')}</div></div>
-              <div class='panel'>{text}</div>{_foot(design)}"""))
+              <div class='panel'>{text}</div>{_foot(design, light=light)}"""))
         else:
-            slides.append(("article", f"""{_photo(s.get('photo'))}
-              <div class='panel'>{text}</div>{_foot(design)}"""))
+            slides.append(("article" + theme, f"""{_photo(s.get('photo'))}
+              <div class='panel'>{text}</div>{_foot(design, light=light)}"""))
 
     slides.append(("outro", f"""{_logo('full', 'white', 'logo-full')}
       {_outro_cta(design)}"""))
