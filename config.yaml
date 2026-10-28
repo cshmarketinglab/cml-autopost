@@ -36,9 +36,17 @@ design:
       - { icon: save, label: 저장 }
       - { icon: follow, label: 팔로우 }
     note: 무료 플레이스 진단 → @cml.place 프로필 링크
-  photo_credit_in_caption: true          # 캡션 끝에 "Photos via Pexels" 표기 (Pexels 권장사항)
+  photo_credit_in_caption: true          # 캡션 끝에 "Photos via Pixabay" 등 출처 표기 (의무 아님, 권장)
   # 검색 결과가 없을 때 쓸 예비 검색어
   photo_fallbacks: ["small cafe interior", "restaurant owner", "shop counter warm light", "empty restaurant tables"]
+
+# ── 댓글 → 자동 DM (실제 DM 발송은 Meta 비즈니스 스위트 '댓글 자동 메시지'에서 설정) ──
+# enabled: true면 캐러셀 캡션 해시태그 위에 아래 문장을 자동으로 넣는다.
+# ⚠️ Meta 쪽 자동화를 끄면 여기도 false로 바꿀 것 (안 그러면 '댓글 달았는데 DM 안 옴' 사고)
+comment_dm:
+  enabled: false
+  keyword: 진단
+  caption_line: "👉 댓글에 '진단' 남기면 무료 플레이스 진단 안내를 DM으로 보내드려요"
 
 # ── 브랜드 정보 (모집글·캐러셀 마지막 장에 사용) ──
 brand:
@@ -51,10 +59,10 @@ brand:
   website: https://cmlab.netlify.app/
   # 아래는 모집글 작성 시 Claude에게 주는 "사실" 목록. 여기 없는 실적·수치는 지어내지 않도록 프롬프트로 막혀 있음
   facts:
-    - 양양 해변 상권에서 게스트하우스·식당·펍·카페 등 업장 9곳 마케팅을 현장에서 직접 맡았음
+    - 게스트하우스·식당·펍·카페 등 업장 9곳의 마케팅을 현장에서 직접 맡았음
     - 네이버 플레이스 전문. 자체 6단계 최적화 프로세스 NELVAR(Need-Explore-Listup-Verify-Action-Review/Share)로 진행, 세팅 4주
     - 정기 관리 상품 새싹·줄기·열매 3단계 (새싹=월 4회 소식 작성+리뷰 답글 가이드+월간 통계+컨설팅, 줄기=플레이스 대리운영+A/B테스트+시즌 제안, 열매=플레이스 광고 운영+단골 재방문 설계)
-    - 강원도 야장·해변포차 키워드를 ChatGPT 검색 답변에 노출시킨 경험이 있음 (GEO, AI 검색 최적화)
+    - 야장·포차 같은 업종 키워드를 ChatGPT 검색 답변에 노출시킨 경험이 있음 (GEO, AI 검색 최적화)
     - 무료 플레이스 진단 제공 (가게 네이버 플레이스를 보고 개선점 전달). 신청은 프로필 링크의 홈페이지에서
     - 가격은 상담 시 안내
 
