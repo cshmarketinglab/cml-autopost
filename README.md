@@ -34,10 +34,11 @@
 2. Settings → Limits에서 **월 사용 한도 $10** 걸어두기 (사고 방지)
 3. API Keys → Create Key → 복사해 둠
 
-### STEP 2-1. Pexels API 키 (캐러셀 사진용, 무료)
-1. pexels.com 가입 → pexels.com/api → Your API Key → 용도에 "Instagram content automation for my marketing account" 정도 적고 발급 (즉시 발급)
-2. 무료 한도: 시간당 200회, 월 20,000회 — 캐러셀 1개에 6~10회 쓰므로 여유 충분
+### STEP 2-1. Pixabay API 키 (캐러셀 사진용, 무료)
+1. pixabay.com 가입·로그인 → pixabay.com/api/docs/ 접속 → 페이지 안 "key" 항목에 본인 키가 표시됨 (별도 신청 없음)
+2. 무료 한도: 60초당 100회 — 캐러셀 1개에 6~10회 쓰므로 충분
 3. 키가 없으면 캐러셀은 사진 없이 검정 배경으로 렌더된다 (발행은 정상 동작)
+4. Pexels는 2026-09-30부터 신규 키 발급이 중단됨. 기존 Pexels 키가 있으면 `PEXELS_API_KEY`도 넣을 수 있고, 둘 다 있으면 Pexels 우선 → 없으면 Pixabay
 
 ### STEP 3. 쓰레드 API 토큰
 1. developers.facebook.com → 내 앱 → 앱 만들기 → 사용 사례에서 **Threads API 액세스** 선택
@@ -71,7 +72,7 @@
 | 이름 | 값 |
 |---|---|
 | `ANTHROPIC_API_KEY` | STEP 2 키 |
-| `PEXELS_API_KEY` | STEP 2-1 키 |
+| `PIXABAY_API_KEY` | STEP 2-1 키 |
 | `THREADS_ACCESS_TOKEN` | STEP 3 토큰 |
 | `THREADS_USER_ID` | STEP 3 id |
 | `IG_ACCESS_TOKEN` | STEP 4 토큰 |
@@ -95,12 +96,12 @@
 
 6~10장 (주제에 따라 Claude가 결정, 인스타 API 한도가 10장): 전면 사진 표지 → 폴라로이드 사진 + 본문 → 상단 사진 + 검정 본문 (반복) → 상단 사진 + 밝은 '오늘의 숙제' 장 → 로고 + 저장·팔로우 CTA
 
-- 사진: Claude가 장마다 내용에 맞는 영어 검색어를 쓰고 Pexels에서 받아온다. 한 번 쓴 사진은 다시 안 쓴다(최근 600장 기록)
+- 사진: Claude가 장마다 내용에 맞는 영어 검색어를 쓰고 Pixabay(또는 Pexels)에서 받아온다. 한 번 쓴 사진은 다시 안 쓴다(최근 600장 기록)
 - 사진 톤 통일: 채도 살짝 낮춤 + 필름 그레인
 - 로고·라벨·시리즈명(`동네 가게 마케팅 수업 N교시`)·아웃트로 문구는 `config.yaml`의 `design`에서 수정
 - 색·글자 크기는 `templates/carousel.css`에서 수정
 - 본문 글이 길면 글자 크기를 자동으로 줄이고, 그래도 넘치면 초안 이슈에 ⚠️ 표시
-- Pexels 사진은 상업적 이용 무료, 출처 표기 의무는 없지만 권장 → 캡션 끝에 `Photos via Pexels` 자동 추가 (`photo_credit_in_caption`으로 끄기 가능)
+- Pixabay·Pexels 사진은 상업적 이용 무료, 출처 표기 의무는 없지만 권장 → 캡션 끝에 `Photos via Pixabay` 자동 추가 (`photo_credit_in_caption`으로 끄기 가능)
 
 ## 검수 명령 (초안 이슈 댓글)
 
