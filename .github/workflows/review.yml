@@ -14,11 +14,11 @@ jobs:
   apply:
     # 초안 이슈 + 저장소 주인 댓글만 처리 (공개 저장소라 남의 댓글 차단)
     if: startsWith(github.event.issue.title, '[초안]') && github.event.comment.user.login == github.repository_owner && startsWith(github.event.comment.body, '/')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # 26으로 자동 전환 시 크롬 설치 깨질 수 있어 고정
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with: { python-version: "3.12", cache: pip }
       - run: pip install requests PyYAML
 

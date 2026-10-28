@@ -16,11 +16,11 @@ concurrency: { group: autopost-repo, cancel-in-progress: false }
 
 jobs:
   generate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # 26으로 자동 전환 시 크롬 설치 깨질 수 있어 고정
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with: { python-version: "3.12", cache: pip }
       - run: pip install -r requirements.txt
       - name: 헤드리스 크롬 + 한글 폰트
@@ -51,7 +51,8 @@ jobs:
           git commit -m "draft: ${{ steps.gen.outputs.date }}"
           for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
 
-      - name: 검수 이슈 열기 (auto_approve=false일 때)
+      - name: 검수 이슈 열기 (auto_approve=false, 새로 생성됐을 때만)
+        if: steps.gen.outputs.generated == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           D: ${{ steps.gen.outputs.date }}
@@ -60,4 +61,8 @@ jobs:
           [ "$AUTO" = "True" ] && exit 0
           (cd src && python review.py body "$D") > /tmp/body.md
           gh label create draft --color BFD4F2 2>/dev/null || true
+          # 재생성이면 같은 날짜의 기존 초안 이슈 닫기
+          for n in $(gh issue list --state open --search "[초안] $D in:title" --json number,title -q ".[] | select(.title==\"[초안] $D\") | .number"); do
+            gh issue close "$n" --comment "재생성됨 → 새 이슈 참고"
+          done
           gh issue create --title "[초안] $D" --body-file /tmp/body.md --label draft

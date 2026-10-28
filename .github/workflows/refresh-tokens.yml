@@ -10,10 +10,10 @@ permissions:
 
 jobs:
   refresh:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # 26으로 자동 전환 시 크롬 설치 깨질 수 있어 고정
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with: { python-version: "3.12" }
       - run: pip install requests
       - name: 연장 후 Secret 갱신
