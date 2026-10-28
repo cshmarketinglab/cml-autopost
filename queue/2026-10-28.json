@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-28",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "empathy",
+      "publish_at": "2026-10-28T08:10:00+09:00",
+      "pillar": "손님 없는 평일 오후의 불안 (장면 묘사→속마음→관점 전환)",
+      "text": "화요일 오후 3시, 가게가 조용하다.\n\n괜히 테이블 한 번 더 닦고\n매출 앱 열었다 닫고\n창밖만 멍하니 보게 되는 시간.\n\n'내가 뭘 잘못하고 있나' 싶은데\n평일 오후가 비는 건 사장 탓만은 아니더라.\n\n그 시간에도 불 켜놓고 자리 지키는 거,\n그게 이미 버티고 있는 거야.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-10-28T12:20:00+09:00",
+      "pillar": "체크리스트형: 플레이스 점검 항목 + NELVAR 소개 + 무료 진단 CTA",
+      "text": "이 중 2개 이상이면 네이버 플레이스부터 봐야 해\n\n☐ 대표 사진이 1년 넘게 그대로\n☐ 소식 탭이 오픈할 때 이후로 텅 빔\n☐ 리뷰 답글 쓸 때마다 뭐라 쓸지 막막\n☐ 검색하면 옆집이 먼저 나옴\n\n양양 해변 상권에서 업장 9곳을 현장에서 맡으면서 NELVAR라는 6단계로 플레이스를 정리해왔어. 세팅은 4주.\n\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해. 가게 플레이스 보고 개선점 짚어줄게.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-10-28T20:40:00+09:00",
+      "pillar": "가족·지인의 '장사 잘 돼?' 질문 (리스트형 + 질문형 마무리)",
+      "text": "\"장사 잘 돼?\"\n이 한마디가 제일 대답하기 어렵다\n\n사장님 속마음 3가지\n\n1. 잘 되는 날도 있고 아닌 날도 있는데 뭐라고 답하지\n2. 걱정해주는 건 아는데 괜히 더 불안해짐\n3. \"응 그럭저럭~\" 하고 화제 돌리는 게 제일 편함\n\n너는 이 질문 받으면 뭐라고 대답해?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": {
+    "topic": "네이버 플레이스 대표사진 고르는 기준",
+    "episode": 1,
+    "kicker": "동네 가게 마케팅 수업 1교시",
+    "cover": {
+      "title": "대표사진은\n메뉴가 먼저일까",
+      "photo_query": "cafe owner smartphone window"
+    },
+    "sections": [
+      {
+        "heading": "첫 장은 메뉴보다 매장 입구",
+        "body": "대표사진을 고르라면 대부분 가장 잘 나온 음식 사진부터 찾는다. 그런데 처음 보는 손님은 맛보다 '어디로 들어가야 하나'를 먼저 떠올린다.\n\n**대표사진 첫 장은 메뉴보다 매장 입구를 먼저 보여주는 편이 낫다.** 경험상 문의 위치와 외관이 보이면 찾아오는 부담이 줄어든다.",
+        "photo_query": "wooden cafe door morning"
+      },
+      {
+        "heading": "음식 사진은 대표 메뉴 한 가지만",
+        "body": "메뉴 열 개를 한 장에 모아 찍으면 무엇이 주력인지 흐려진다. 손님은 사진을 오래 들여다보지 않고 대체로 스쳐 지나간다.\n\n**대표사진에 들어가는 음식은 가게를 대표하는 한 접시로 좁힌다.** 경험상 위에서 내려다본 사진보다 눈높이에서 찍은 사진이 먹고 싶은 마음을 더 건드리는 편이다.",
+        "photo_query": "chef plating dish closeup"
+      },
+      {
+        "heading": "낮의 자연광이 가장 무난하다",
+        "body": "저녁 조명 아래 찍은 사진은 분위기가 나지만 색이 누렇게 변하기 쉽다. 음식이 실제보다 어둡고 탁해 보이면 손해다.\n\n**사진은 영업 시작 전, 창가로 빛이 들어오는 시간에 한 번에 찍어둔다.** 형광등은 끄고 창가 자리에 접시를 놓는 것만으로도 대체로 결과가 달라진다.",
+        "photo_query": "sunlit window table coffee"
+      },
+      {
+        "heading": "사람 손이 들어가면 온기가 생긴다",
+        "body": "텅 빈 테이블 사진은 깔끔하지만 어딘가 차갑다. 음식을 내려놓는 손이나 손님 시선에서 본 장면이 훨씬 가깝게 느껴진다.\n\n**얼굴을 꼭 넣을 필요는 없고, 손과 컵과 접시만 들어가도 충분하다.** 얼굴 노출이 부담스러운 사장님이라면 이 정도부터 시작해도 된다.",
+        "photo_query": "hands placing plate on table"
+      },
+      {
+        "heading": "오늘은 대표사진 후보 3장 고르기",
+        "body": "사진을 새로 찍기 전에 이미 가진 사진부터 점검한다. 휴대폰 앨범에서 입구, 대표 메뉴, 내부 분위기 사진을 한 장씩 골라본다.\n\n**오늘 할 일은 후보 3장을 골라 현재 대표사진과 나란히 비교해 보는 것이다.** 마음에 들지 않으면 이번 주 낮 시간에 한 번 다시 찍으면 된다.",
+        "photo_query": "hand scrolling phone gallery photos"
+      }
+    ],
+    "caption": "대표사진 첫 장은 메뉴보다 매장 입구가 먼저입니다.\n손님은 맛보다 '찾아갈 수 있을까'를 먼저 확인하는 경우가 많습니다.\n입구, 대표 메뉴 한 접시, 낮의 자연광, 사람 손까지 오늘 바로 점검해 보세요.\n사진을 다시 찍기 전, 앨범에서 후보 3장부터 골라보시길 권합니다.\n나중에 다시 꺼내볼 수 있도록 저장해 두세요.\n\n#자영업자 #소상공인 #사장님 #네이버플레이스 #대표사진 #가게마케팅 #카페운영 #식당마케팅\n\nPhotos via Pixabay",
+    "photos": [
+      {
+        "slide": "cover",
+        "id": "pb:10318482",
+        "provider": "Pixabay",
+        "photographer": "Daniil_Kondrashin",
+        "url": "https://pixabay.com/photos/sunset-nature-twilight-landscape-10318482/",
+        "query": "cafe owner smartphone window"
+      },
+      {
+        "slide": "s1",
+        "id": "pb:5037804",
+        "provider": "Pixabay",
+        "photographer": "JessicaKwok",
+        "url": "https://pixabay.com/photos/coffee-caffeine-cafe-food-drink-5037804/",
+        "query": "wooden cafe door morning"
+      },
+      {
+        "slide": "s2",
+        "id": "pb:8151625",
+        "provider": "Pixabay",
+        "photographer": "kifotofotografia",
+        "url": "https://pixabay.com/photos/food-dish-cheese-salad-garnish-8151625/",
+        "query": "chef plating dish closeup"
+      },
+      {
+        "slide": "s3",
+        "id": "pb:8420931",
+        "provider": "Pixabay",
+        "photographer": "TheDesignLady87",
+        "url": "https://pixabay.com/photos/bread-coffee-breakfast-home-8420931/",
+        "query": "sunlit window table coffee"
+      },
+      {
+        "slide": "s4",
+        "id": "pb:2110245",
+        "provider": "Pixabay",
+        "photographer": "TerriC",
+        "url": "https://pixabay.com/photos/place-setting-dinner-table-setting-2110245/",
+        "query": "hands placing plate on table"
+      },
+      {
+        "slide": "s5",
+        "id": "pb:380008",
+        "provider": "Pixabay",
+        "photographer": "wilkernet",
+        "url": "https://pixabay.com/photos/telephone-mobility-cell-phone-380008/",
+        "query": "hand scrolling phone gallery photos"
+      }
+    ],
+    "missing_photos": 0,
+    "overflow_slides": [],
+    "images": [
+      "out/2026-10-28/01.jpg",
+      "out/2026-10-28/02.jpg",
+      "out/2026-10-28/03.jpg",
+      "out/2026-10-28/04.jpg",
+      "out/2026-10-28/05.jpg",
+      "out/2026-10-28/06.jpg",
+      "out/2026-10-28/07.jpg"
+    ],
+    "publish_at": "2026-10-28T19:10:00+09:00",
+    "approved": false,
+    "status": "pending"
+  }
+}
