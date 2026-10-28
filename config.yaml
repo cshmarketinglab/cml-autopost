@@ -36,7 +36,7 @@ design:
       - { icon: save, label: 저장 }
       - { icon: follow, label: 팔로우 }
     note: 무료 플레이스 진단 → @cml.place 프로필 링크
-  photo_credit_in_caption: true          # 캡션 끝에 "Photos via Pixabay" 등 출처 표기 (의무 아님, 권장)
+  photo_credit_in_caption: false          # 캡션 끝에 "Photos via Pixabay" 등 출처 표기 (의무 아님, 권장)
   # 검색 결과가 없을 때 쓸 예비 검색어
   photo_fallbacks: ["small cafe interior", "restaurant owner", "shop counter warm light", "empty restaurant tables"]
 
