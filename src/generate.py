@@ -99,7 +99,14 @@ def gen_carousel(cfg: dict, d: date, history: dict) -> dict:
     images, overflow = render_carousel(data, ds, img_dir)
     shutil.rmtree(src_dir, ignore_errors=True)  # 원본 사진은 저장소에 안 남김
 
-    caption = data["caption"].strip()
+    caption = build_caption(data, cfg)
+    kw_line = (cfg.get("comment_dm") or {}).get("caption_line", "").strip()
+    if (cfg.get("comment_dm") or {}).get("enabled") and kw_line:
+        # 해시태그 줄 바로 앞에 '댓글 키워드' 안내 삽입 (Meta 자동 DM과 짝)
+        lines = caption.split("\n")
+        at = next((i for i, l in enumerate(lines) if l.strip().startswith("#")), len(lines))
+        lines[at:at] = [kw_line, ""]
+        caption = "\n".join(lines)
     if ds.get("photo_credit_in_caption") and credits:
         names = sorted({c["provider"] for c in credits if c["provider"] != "mock"}) or ["stock"]
         caption += "\n\nPhotos via " + " & ".join(names)
@@ -113,6 +120,25 @@ def gen_carousel(cfg: dict, d: date, history: dict) -> dict:
         "publish_at": at_kst(d, cfg["carousel_time"]),
         "approved": bool(cfg["auto_approve"]), "status": "pending",
     }
+
+
+def build_caption(data: dict, cfg: dict) -> str:
+    """모바일용 캡션: 짧은 줄 + 빈 줄로 블록 구분. 본문은 슬라이드 제목으로 조립(항상 짧고 일관됨)."""
+    secs = data["sections"]
+    tips = "\n".join(f"✔️ {s['heading'].strip()}" for s in secs[:-1])
+    hw = secs[-1]["heading"].strip()
+    tags = data.get("hashtags") or []
+    if isinstance(tags, str):
+        tags = tags.split()
+    tags = " ".join(t if t.startswith("#") else f"#{t}" for t in tags[:8])
+    blocks = [
+        data["hook"].strip(),
+        f"{data.get('kicker', '').strip()} 정리\n{tips}",
+        f"📝 오늘의 숙제\n{hw}",
+        cfg["design"].get("caption_save_line", "저장해두고 필요할 때 꺼내 보세요"),
+        tags,
+    ]
+    return "\n\n".join(b for b in blocks if b)
 
 
 def check_carousel(data: dict) -> list[str]:
@@ -138,8 +164,11 @@ def check_carousel(data: dict) -> list[str]:
             p.append(f"{i}번 **강조** 정확히 1개 필요")
         if not s.get("photo_query"):
             p.append(f"{i}번 photo_query 없음")
-    if not data.get("caption"):
-        p.append("caption 없음")
+    hook = (data.get("hook") or "").strip().split("\n")
+    if not data.get("hook") or len(hook) > 2 or any(len(x) > 24 for x in hook):
+        p.append("hook은 2줄 이내, 한 줄 20자 이내")
+    if not data.get("hashtags"):
+        p.append("hashtags 없음")
     return p
 
 
