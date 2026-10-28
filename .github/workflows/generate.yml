@@ -1,1 +1,62 @@
+name: 1. 매일 초안 생성
 
+on:
+  schedule:
+    - cron: "30 21 * * *"   # 매일 06:30 KST (UTC 21:30)
+  workflow_dispatch:
+    inputs:
+      date: { description: "생성 날짜 YYYY-MM-DD (비우면 오늘)", required: false }
+      force: { description: "이미 있어도 다시 생성", type: boolean, default: false }
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency: { group: autopost-repo, cancel-in-progress: false }
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - name: 헤드리스 크롬 + 한글 폰트
+        run: |
+          python -m playwright install --with-deps chromium
+          sudo apt-get install -y -qq fonts-noto-cjk >/dev/null
+
+      - name: 생성
+        id: gen
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          INPUT_DATE: ${{ inputs.date }}
+          INPUT_FORCE: ${{ inputs.force }}
+        run: |
+          D="${INPUT_DATE:-$(TZ=Asia/Seoul date +%F)}"
+          echo "date=$D" >> "$GITHUB_OUTPUT"
+          ARGS="$D"; [ "$INPUT_FORCE" = "true" ] && ARGS="$D --force"
+          cd src && python generate.py $ARGS
+
+      - name: 커밋
+        run: |
+          git config user.name "cml-bot"
+          git config user.email "cml-bot@users.noreply.github.com"
+          for p in queue out history.json; do [ -e "$p" ] && git add "$p"; done
+          git diff --cached --quiet && exit 0
+          git commit -m "draft: ${{ steps.gen.outputs.date }}"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+
+      - name: 검수 이슈 열기 (auto_approve=false일 때)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          D: ${{ steps.gen.outputs.date }}
+        run: |
+          AUTO=$(python -c "import yaml;print(yaml.safe_load(open('config.yaml'))['auto_approve'])")
+          [ "$AUTO" = "True" ] && exit 0
+          (cd src && python review.py body "$D") > /tmp/body.md
+          gh label create draft --color BFD4F2 2>/dev/null || true
+          gh issue create --title "[초안] $D" --body-file /tmp/body.md --label draft

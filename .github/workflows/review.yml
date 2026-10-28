@@ -1,0 +1,60 @@
+name: 3. 검수 댓글 반영
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency: { group: autopost-repo, cancel-in-progress: false }
+
+jobs:
+  apply:
+    # 초안 이슈 + 저장소 주인 댓글만 처리 (공개 저장소라 남의 댓글 차단)
+    if: startsWith(github.event.issue.title, '[초안]') && github.event.comment.user.login == github.repository_owner && startsWith(github.event.comment.body, '/')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install requests PyYAML
+
+      - name: 명령 반영
+        id: apply
+        env:
+          TITLE: ${{ github.event.issue.title }}
+          COMMENT: ${{ github.event.comment.body }}
+        run: |
+          D=$(echo "$TITLE" | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}')
+          MSG=$(cd src && printf '%s' "$COMMENT" | python review.py apply "$D" 2>&1) || true
+          echo "$MSG"
+          { echo "msg<<EOF"; echo "$MSG"; echo "EOF"; } >> "$GITHUB_OUTPUT"
+
+      - name: 시간 지난 승인 건 즉시 발행
+        continue-on-error: true
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: cd src && python publish.py
+
+      - name: 커밋
+        if: always()
+        run: |
+          git config user.name "cml-bot"
+          git config user.email "cml-bot@users.noreply.github.com"
+          [ -d queue ] && git add queue
+          git diff --cached --quiet && exit 0
+          git commit -m "review: ${{ github.event.issue.title }}"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+
+      - name: 결과 답글
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MSG: ${{ steps.apply.outputs.msg }}
+        run: gh issue comment ${{ github.event.issue.number }} --body "🤖 ${MSG:-처리 오류 — Actions 로그 확인}"

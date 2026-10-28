@@ -1,0 +1,53 @@
+name: 2. 예약 발행
+
+on:
+  schedule:
+    # 시각은 config.yaml 슬롯과 맞춤 (UTC = KST - 9시간). 각 슬롯 30분 뒤 백업 실행 1회
+    - cron: "10 23 * * *"   # 08:10 KST 쓰레드
+    - cron: "40 23 * * *"
+    - cron: "20 3 * * *"    # 12:20 KST 쓰레드
+    - cron: "50 3 * * *"
+    - cron: "10 10 * * *"   # 19:10 KST 캐러셀
+    - cron: "40 10 * * *"
+    - cron: "40 11 * * *"   # 20:40 KST 쓰레드
+    - cron: "10 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: { group: autopost-repo, cancel-in-progress: false }
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install requests PyYAML
+
+      - name: 발행
+        id: pub
+        continue-on-error: true
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: cd src && python publish.py
+
+      - name: 상태 커밋 (실패해도 기록 — 중복 발행 방지)
+        if: always()
+        run: |
+          git config user.name "cml-bot"
+          git config user.email "cml-bot@users.noreply.github.com"
+          [ -d queue ] && git add queue
+          git diff --cached --quiet && exit 0
+          git commit -m "publish: $(TZ=Asia/Seoul date '+%F %H:%M')"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+
+      - name: 실패 시 워크플로 실패 표시 (GitHub 알림 메일 발송용)
+        if: steps.pub.outcome == 'failure'
+        run: exit 1

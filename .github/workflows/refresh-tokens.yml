@@ -1,0 +1,35 @@
+name: 4. 토큰 자동 연장
+
+on:
+  schedule:
+    - cron: "0 1 1,11,21 * *"   # 매월 1·11·21일 10:00 KST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests
+      - name: 연장 후 Secret 갱신
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}   # Secrets 쓰기 권한 있는 개인 토큰
+        run: |
+          cd src
+          STATUS=0
+          python refresh_tokens.py > /tmp/new.env || STATUS=$?
+          while IFS='=' read -r NAME VALUE; do
+            [ -z "$NAME" ] && continue
+            echo "::add-mask::$VALUE"
+            printf '%s' "$VALUE" | gh secret set "$NAME" --repo "$GITHUB_REPOSITORY"
+            echo "$NAME 갱신"
+          done < /tmp/new.env
+          rm -f /tmp/new.env
+          exit $STATUS
