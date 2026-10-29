@@ -114,6 +114,8 @@ def gen_carousel(cfg: dict, d: date, history: dict, news_item: dict | None = Non
     prev = (read_json(queue_path(d)) or {}).get("carousel") or {}
     episode = prev.get("episode") or ds["series_start"] + history.get("carousel_count", 0)
     data["kicker"] = ds["series"].format(n=episode)
+    if news_item:  # 뉴스 회차는 표지에 '· 이슈 특강' 표시
+        data["kicker"] += ds.get("news_suffix", " · 이슈 특강")
 
     # 슬라이드별 사진 (표지 세로, 본문 가로)
     img_dir = OUT_DIR / d.isoformat()
