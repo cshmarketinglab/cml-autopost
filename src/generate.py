@@ -71,7 +71,18 @@ def gen_threads(cfg: dict, plan: list[dict], history: dict, news: list | None = 
     return out
 
 
-def gen_carousel(cfg: dict, d: date, history: dict) -> dict:
+def pick_carousel_news(cfg: dict, d: date, history: dict) -> dict | None:
+    """뉴스 중 '캐러셀감'으로 표시된 기사 1개. 최근 2일 안에 뉴스 캐러셀이 있었으면 건너뜀(너무 잦지 않게).
+    같은 날 재생성은 허용."""
+    if not cfg.get("news_carousel", True):
+        return None
+    last = history.get("last_carousel_news_date")
+    if last and last != d.isoformat() and (d - date.fromisoformat(last)).days <= cfg.get("news_carousel_gap_days", 2):
+        return None
+    return next((n for n in load_news(d) if n.get("carousel") and n.get("angle")), None)
+
+
+def gen_carousel(cfg: dict, d: date, history: dict, news_item: dict | None = None) -> dict:
     import shutil
 
     from photos import fetch
@@ -83,6 +94,13 @@ def gen_carousel(cfg: dict, d: date, history: dict) -> dict:
         recent=_recent(history, "carousel_topics", 30),
     )
     user = "오늘 캐러셀 원고 작성해줘."
+    if news_item:
+        user += (
+            "\n\n[오늘은 뉴스 기반 회차] 아래 뉴스를 계기로, 사장님이 이 변화에 맞춰 '할 일' 중심으로 써라. 주제 후보 목록은 무시."
+            f"\n- 기사: {news_item['title']}\n- 요약: {news_item.get('summary', '')}\n- 관점: {news_item['angle']}"
+            "\n- 기사 제목·요약 밖의 금액·비율·날짜·자격 조건은 절대 쓰지 마(원문을 못 봤다). 조건이 중요하면 '공식 공고에서 확인'으로."
+            "\n- 정부·정치 평가 금지. 첫 section에서 무슨 변화인지 한 문장으로만 짚고 바로 실천 팁으로."
+        )
     for _ in range(3):
         data = ask_json(cfg["model"], system, user, max_tokens=4000)
         problems = check_carousel(data)
@@ -115,6 +133,8 @@ def gen_carousel(cfg: dict, d: date, history: dict) -> dict:
     images, overflow = render_carousel(data, ds, img_dir)
     shutil.rmtree(src_dir, ignore_errors=True)  # 원본 사진은 저장소에 안 남김
 
+    if news_item:
+        data["news_source"] = news_item.get("source") or "관련 기사"
     caption = build_caption(data, cfg)
     kw_line = (cfg.get("comment_dm") or {}).get("caption_line", "").strip()
     if (cfg.get("comment_dm") or {}).get("enabled") and kw_line:
@@ -130,6 +150,7 @@ def gen_carousel(cfg: dict, d: date, history: dict) -> dict:
         block.pop("photo", None)
     return {
         "topic": data.get("topic", ""), "episode": episode, "kicker": data["kicker"],
+        "news_based": news_item["title"] if news_item else "",
         "cover": data["cover"], "sections": data["sections"], "caption": caption,
         "photos": credits, "missing_photos": len(targets) - len(credits), "overflow_slides": overflow,
         "images": [Path(p).relative_to(ROOT).as_posix() for p in images],
@@ -151,6 +172,8 @@ def build_caption(data: dict, cfg: dict) -> str:
         data["hook"].strip(),
         f"{data.get('kicker', '').strip()} 정리\n{tips}",
         f"📝 오늘의 숙제\n{hw}",
+        (f"📰 참고: {data['news_source']} 보도 · 세부 조건은 공식 공고를 꼭 확인하세요"
+         if data.get("news_source") else ""),
         cfg["design"].get("caption_save_line", "저장해두고 필요할 때 꺼내 보세요"),
         tags,
     ]
@@ -202,10 +225,15 @@ def main():
     queue = {"date": d.isoformat(), "threads": threads, "carousel": None}
 
     anchor = date.fromisoformat(cfg["carousel_anchor_date"])
-    if d >= anchor and is_every_n(d, anchor, cfg["carousel_every_n_days"]):
-        queue["carousel"] = gen_carousel(cfg, d, history)
+    scheduled = d >= anchor and is_every_n(d, anchor, cfg["carousel_every_n_days"])
+    # 격일 정기 캐러셀 + 중요 뉴스가 있는 날은 쉬는 날이어도 뉴스 캐러셀 추가
+    news_item = pick_carousel_news(cfg, d, history)
+    if scheduled or news_item:
+        queue["carousel"] = gen_carousel(cfg, d, history, news_item)
         car = queue["carousel"]
         history["carousel_topics"].append(car["topic"])
+        if car.get("news_based"):
+            history["last_carousel_news_date"] = d.isoformat()
         prev_ep = ((read_json(qp) or {}).get("carousel") or {}).get("episode")
         if car["episode"] != prev_ep:  # 재생성 시 회차 중복 증가 방지
             history["carousel_count"] = history.get("carousel_count", 0) + 1

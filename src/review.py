@@ -38,6 +38,8 @@ def body(d: date) -> str:
     if c:
         n = len(q["threads"]) + 1
         lines += [f"### {n}. 인스타 캐러셀 · {c['publish_at'][11:16]} · {c.get('kicker', '')} · {c['topic']}", ""]
+        if c.get("news_based"):
+            lines.append(f"> 📰 뉴스 기반 회차: {c['news_based']} — 숫자·조건이 들어갔는지 꼭 확인")
         if c.get("missing_photos"):
             lines.append(f"> ⚠️ 사진 {c['missing_photos']}장 못 찾음 → 해당 장은 사진 없이 렌더됨")
         if c.get("overflow_slides"):

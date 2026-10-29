@@ -100,12 +100,15 @@ PROMPT = """너는 동네 식당·카페·펍·숙박업 사장님 대상 마케
 - 요약은 주어진 제목·요약에 있는 내용만. 없는 수치·날짜·조건을 지어내지 마. 확실하지 않으면 "자세한 조건은 원문 확인".
 - why: 이 사람(마케터) 입장에서 왜 중요한지 한 줄.
 - idea: 이 뉴스로 쓸 수 있는 쓰레드 공감글 소재 한 줄 (반말, 선택. 억지면 빈 문자열).
+- carousel: 사장님이 "이건 알아둬야 해" 하고 저장할 만큼 중요하고 실천할 거리가 있는 기사면 true. 기준을 높게 — 하루 최대 1개, 대부분의 날은 0개.
+  (예: 사장님 대상 지원사업·제도 변화, 네이버 플레이스·배달앱 정책 변경. 단순 통계·업계 동향·인사 기사는 false)
+- angle: carousel이 true일 때만, "이 변화에 사장님이 할 일" 관점의 캐러셀 주제 한 줄.
 
 [기사 목록]
 {items}
 
 [출력] JSON만:
-{{"picks": [{{"i": 번호, "category": "정책|채널|트렌드", "summary": "2문장 이내", "why": "...", "idea": "..."}}]}}"""
+{{"picks": [{{"i": 번호, "category": "정책|채널|트렌드", "summary": "2문장 이내", "why": "...", "idea": "...", "carousel": false, "angle": ""}}]}}"""
 
 
 def build_body(d: date, picks: list[dict], items: list[dict], src_name: str) -> str:
@@ -122,6 +125,8 @@ def build_body(d: date, picks: list[dict], items: list[dict], src_name: str) -> 
                       f"- {p['summary']}", f"- 👉 {p['why']}"]
             if p.get("idea"):
                 lines.append(f"- ✍️ 소재: {p['idea']}")
+            if p.get("carousel"):
+                lines.append(f"- 🎴 캐러셀 후보: {p.get('angle', '')}")
             lines.append("")
     lines += ["---", "요약은 기사 제목·발췌 기반이라 세부 조건은 원문을 꼭 확인하세요."]
     return "\n".join(lines)
@@ -145,7 +150,9 @@ def main():
     # 초안 생성(generate.py)이 쓰레드 '뉴스 공감글' 재료로 사용
     write_json(ROOT / "news" / f"{d.isoformat()}.json", [
         {"category": p.get("category", ""), "title": items[p["i"]]["title"], "url": items[p["i"]]["url"],
-         "summary": p.get("summary", ""), "idea": p.get("idea", "")} for p in picks])
+         "summary": p.get("summary", ""), "idea": p.get("idea", ""),
+         "carousel": bool(p.get("carousel")), "angle": p.get("angle", ""), "source": items[p["i"]]["source"]}
+        for p in picks])
     seen = read_json(SEEN_FILE, []) + [a["url"] for a in items]
     write_json(SEEN_FILE, seen[-3000:])
 
