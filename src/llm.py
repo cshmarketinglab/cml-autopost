@@ -21,20 +21,25 @@ def ask_json(model: str, system: str, user: str, max_tokens: int = 4000, retries
         return mock_response(user)
 
     client = anthropic.Anthropic()  # ANTHROPIC_API_KEY 환경변수 사용
+    # 도구 호출 형식으로 받으면 API가 JSON 구조를 보장 → 본문 속 따옴표 등으로 깨지는 문제 방지
+    tool = {"name": "output", "description": "요청된 JSON 결과를 그대로 담아 제출",
+            "input_schema": {"type": "object", "additionalProperties": True}}
+    extra = {"system": system} if system else {}
     last_err = None
     for _ in range(retries + 1):
-        msg = client.messages.create(
-            model=model,
-            max_tokens=max_tokens,
-            system=system,
-            messages=[{"role": "user", "content": user}],
-        )
-        text = "".join(b.text for b in msg.content if b.type == "text")
         try:
-            return _extract_json(text)
+            msg = client.messages.create(
+                model=model, max_tokens=max_tokens, messages=[{"role": "user", "content": user}],
+                tools=[tool], tool_choice={"type": "tool", "name": "output"}, **extra)
+            for b in msg.content:
+                if b.type == "tool_use" and isinstance(b.input, dict) and b.input:
+                    return b.input
+            text = "".join(getattr(b, "text", "") for b in msg.content)
+            return _extract_json(text)  # 혹시 도구 대신 글로 답한 경우
+        except anthropic.APIStatusError:
+            raise
         except Exception as e:  # noqa: BLE001
             last_err = e
-            user += "\n\n(직전 응답이 JSON 형식이 아니었음. 반드시 JSON 객체 하나만 출력할 것.)"
     raise RuntimeError(f"Claude 응답 JSON 파싱 실패: {last_err}")
 
 
