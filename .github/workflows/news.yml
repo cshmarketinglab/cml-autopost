@@ -1,0 +1,56 @@
+name: 5. 아침 뉴스 브리핑
+
+on:
+  schedule:
+    - cron: "40 21 * * *"   # 매일 06:40 KST (UTC 21:40)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency: { group: autopost-repo, cancel-in-progress: false }
+
+jobs:
+  news:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install anthropic requests PyYAML
+
+      - name: 수집·선별
+        id: news
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}          # 선택 (없으면 구글 뉴스)
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: |
+          D=$(TZ=Asia/Seoul date +%F)
+          echo "date=$D" >> "$GITHUB_OUTPUT"
+          cd src && python news.py "$D" > /tmp/news.md
+          [ -s /tmp/news.md ] && echo "has=true" >> "$GITHUB_OUTPUT" || true
+
+      - name: 이슈 올리기 (어제 뉴스 이슈는 자동으로 닫기)
+        if: steps.news.outputs.has == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          D: ${{ steps.news.outputs.date }}
+        run: |
+          gh label create news --color FBCA04 2>/dev/null || true
+          for n in $(gh issue list --state open --label news --json number -q '.[].number'); do
+            gh issue close "$n"
+          done
+          gh issue create --title "[뉴스] $D" --body-file /tmp/news.md --label news
+
+      - name: 본 기사 기록 커밋 (중복 방지)
+        if: always()
+        run: |
+          git config user.name "cml-bot"
+          git config user.email "cml-bot@users.noreply.github.com"
+          [ -f news_seen.json ] && git add news_seen.json
+          git diff --cached --quiet && exit 0
+          git commit -m "news: ${{ steps.news.outputs.date }}"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
