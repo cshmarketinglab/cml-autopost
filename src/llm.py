@@ -26,16 +26,27 @@ def ask_json(model: str, system: str, user: str, max_tokens: int = 4000, retries
             "input_schema": {"type": "object", "additionalProperties": True}}
     extra = {"system": system} if system else {}
     last_err = None
+    # 일부 모델은 도구 강제(tool_choice=tool)를 지원하지 않음 → 자동 선택 + 지시문으로 도구 사용 유도
+    ask = user + "\n\n(결과는 반드시 output 도구를 호출해서 제출할 것. 본문 텍스트로 쓰지 말 것.)"
     for _ in range(retries + 1):
         try:
             msg = client.messages.create(
-                model=model, max_tokens=max_tokens, messages=[{"role": "user", "content": user}],
-                tools=[tool], tool_choice={"type": "tool", "name": "output"}, **extra)
+                model=model, max_tokens=max_tokens, messages=[{"role": "user", "content": ask}],
+                tools=[tool], tool_choice={"type": "auto"}, **extra)
             for b in msg.content:
                 if b.type == "tool_use" and isinstance(b.input, dict) and b.input:
                     return b.input
             text = "".join(getattr(b, "text", "") for b in msg.content)
-            return _extract_json(text)  # 혹시 도구 대신 글로 답한 경우
+            return _extract_json(text)  # 도구 대신 글로 답한 경우
+        except anthropic.BadRequestError as e:
+            # 도구 자체를 못 쓰는 경우 → 예전 방식(텍스트 JSON)으로 한 번 더
+            last_err = e
+            try:
+                msg = client.messages.create(model=model, max_tokens=max_tokens,
+                                             messages=[{"role": "user", "content": user}], **extra)
+                return _extract_json("".join(getattr(b, "text", "") for b in msg.content))
+            except Exception as e2:  # noqa: BLE001
+                last_err = e2
         except anthropic.APIStatusError:
             raise
         except Exception as e:  # noqa: BLE001
