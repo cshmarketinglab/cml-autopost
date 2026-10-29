@@ -16,7 +16,7 @@ from datetime import date
 
 from common import now_kst, queue_path, read_json, write_json
 
-TYPE_KO = {"empathy": "공감", "recruit": "모집"}
+TYPE_KO = {"empathy": "공감", "news": "뉴스 공감", "recruit": "모집"}
 
 
 def _items(q: dict) -> list[dict]:

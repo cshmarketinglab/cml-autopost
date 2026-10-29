@@ -142,6 +142,10 @@ def main():
         return
     src_name = "네이버 뉴스" if os.environ.get("NAVER_CLIENT_ID") else "구글 뉴스"
     print(build_body(d, picks, items, src_name))
+    # 초안 생성(generate.py)이 쓰레드 '뉴스 공감글' 재료로 사용
+    write_json(ROOT / "news" / f"{d.isoformat()}.json", [
+        {"category": p.get("category", ""), "title": items[p["i"]]["title"], "url": items[p["i"]]["url"],
+         "summary": p.get("summary", ""), "idea": p.get("idea", "")} for p in picks])
     seen = read_json(SEEN_FILE, []) + [a["url"] for a in items]
     write_json(SEEN_FILE, seen[-3000:])
 

@@ -16,17 +16,28 @@ def _recent(history: dict, key: str, n: int = 40) -> str:
     return "\n".join(f"- {x}" for x in items) or "- (없음)"
 
 
-def plan_threads(cfg: dict, d: date) -> list[dict]:
+def load_news(d: date) -> list[dict]:
+    """news.py가 같은 날 저장한 선별 기사 (없으면 빈 목록)"""
+    return read_json(ROOT / "news" / f"{d.isoformat()}.json", []) or []
+
+
+def plan_threads(cfg: dict, d: date, has_news: bool = False) -> list[dict]:
     anchor = date.fromisoformat(cfg["carousel_anchor_date"])
     recruit_today = is_every_n(d, anchor, cfg["recruit_every_n_days"])
     plan = []
     for s in cfg["threads_slots"]:
         t = "recruit" if (recruit_today and s["slot"] == cfg["recruit_slot"]) else "empathy"
         plan.append({"slot": s["slot"], "type": t, "publish_at": at_kst(d, s["time"])})
+    # 뉴스가 있으면 첫 공감글 하나를 '뉴스 공감글'로 (config의 news_post: false로 끌 수 있음)
+    if has_news and cfg.get("news_post", True):
+        for p in plan:
+            if p["type"] == "empathy":
+                p["type"] = "news"
+                break
     return plan
 
 
-def gen_threads(cfg: dict, plan: list[dict], history: dict) -> list[dict]:
+def gen_threads(cfg: dict, plan: list[dict], history: dict, news: list | None = None) -> list[dict]:
     b = cfg["brand"]
     system = (PROMPT_DIR / "threads.md").read_text(encoding="utf-8").format(
         brand_name=b["name"], brand_cta=b["cta"], copy_main=b["copy_main"], copy_sub=b["copy_sub"],
@@ -38,6 +49,11 @@ def gen_threads(cfg: dict, plan: list[dict], history: dict) -> list[dict]:
         f"공감글 소재 후보(서로 다른 걸로 골라): {', '.join(cfg['empathy_pillars'])}\n"
         "각 글은 서로 소재·구조·첫 줄 형식이 달라야 해."
     )
+    if news and any(p["type"] == "news" for p in plan):
+        cands = [n for n in news if n.get("category") != "트렌드"] or news
+        user += "\n\n[오늘 뉴스 — type=news 글은 이 중 하나로]\n" + "\n".join(
+            f"- ({n.get('category', '')}) {n['title']} / 요약: {n.get('summary', '')} / 소재 힌트: {n.get('idea', '')}"
+            for n in cands[:5])
     for attempt in range(3):
         data = ask_json(cfg["model"], system, user)
         posts = data.get("posts", [])
@@ -181,7 +197,8 @@ def main():
         return
     history = read_json(HISTORY_FILE, {"threads_hooks": [], "carousel_topics": []})
 
-    threads = gen_threads(cfg, plan_threads(cfg, d), history)
+    news = load_news(d)
+    threads = gen_threads(cfg, plan_threads(cfg, d, has_news=bool(news)), history, news)
     queue = {"date": d.isoformat(), "threads": threads, "carousel": None}
 
     anchor = date.fromisoformat(cfg["carousel_anchor_date"])
