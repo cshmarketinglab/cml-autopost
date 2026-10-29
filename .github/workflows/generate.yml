@@ -2,7 +2,7 @@ name: 1. 매일 초안 생성
 
 on:
   schedule:
-    - cron: "30 21 * * *"   # 매일 06:30 KST (UTC 21:30)
+    - cron: "30 20 * * *"   # 매일 05:30 KST (UTC 20:30) — GitHub 지연 감안해 여유 있게
   workflow_dispatch:
     inputs:
       date: { description: "생성 날짜 YYYY-MM-DD (비우면 오늘)", required: false }
@@ -28,6 +28,20 @@ jobs:
           python -m playwright install --with-deps chromium
           sudo apt-get install -y -qq fonts-noto-cjk >/dev/null
 
+      - name: 뉴스 수집·선별 (실패해도 초안 생성은 계속)
+        id: news
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          INPUT_DATE: ${{ inputs.date }}
+        run: |
+          D="${INPUT_DATE:-$(TZ=Asia/Seoul date +%F)}"
+          [ -f "news/$D.json" ] && exit 0   # 재생성 시 뉴스는 다시 안 모음
+          cd src && python news.py "$D" > /tmp/news.md
+          [ -s /tmp/news.md ] && echo "has=true" >> "$GITHUB_OUTPUT" || true
+
       - name: 생성
         id: gen
         env:
@@ -46,7 +60,7 @@ jobs:
         run: |
           git config user.name "cml-bot"
           git config user.email "cml-bot@users.noreply.github.com"
-          for p in queue out history.json; do [ -e "$p" ] && git add "$p"; done
+          for p in queue out history.json news news_seen.json; do [ -e "$p" ] && git add "$p"; done
           git diff --cached --quiet && exit 0
           git commit -m "draft: ${{ steps.gen.outputs.date }}"
           for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
@@ -66,3 +80,15 @@ jobs:
             gh issue close "$n" --comment "재생성됨 → 새 이슈 참고"
           done
           gh issue create --title "[초안] $D" --body-file /tmp/body.md --label draft
+
+      - name: 뉴스 이슈 올리기 (어제 뉴스 이슈는 자동으로 닫기)
+        if: steps.news.outputs.has == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          D: ${{ steps.gen.outputs.date }}
+        run: |
+          gh label create news --color FBCA04 2>/dev/null || true
+          for n in $(gh issue list --state open --label news --json number -q '.[].number'); do
+            gh issue close "$n"
+          done
+          gh issue create --title "[뉴스] $D" --body-file /tmp/news.md --label news
