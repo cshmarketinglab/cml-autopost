@@ -69,8 +69,15 @@ ICONS = {
 }
 
 
-def _outro_cta(design: dict) -> str:
-    o = design["outro"]
+NEWS_OUTRO = {  # 뉴스(이슈 특강) 회차 마지막 장 — 확산(공유)·재방문(팔로우) 중심
+    "headline": "주변 사장님께도 알려주세요",
+    "buttons": [{"icon": "share", "label": "공유"}, {"icon": "follow", "label": "팔로우"}],
+    "note": "이런 소식 놓치지 않게 @cml.place",
+}
+
+
+def _outro_cta(design: dict, news: bool = False) -> str:
+    o = {**NEWS_OUTRO, **(design.get("outro_news") or {})} if news else design["outro"]
     btns = "".join(
         f"<span class='btn {'fill' if i == 0 else ''}'>{ICONS.get(b['icon'], '')}{_esc(b['label'])}</span>"
         for i, b in enumerate(o["buttons"]))
@@ -108,7 +115,7 @@ def build_slides(doc: dict, design: dict) -> list[tuple[str, str]]:
               <div class='panel'>{text}</div>{_foot(design, light=light)}"""))
 
     slides.append(("outro", f"""{_logo('full', 'white', 'logo-full')}
-      {_outro_cta(design)}"""))
+      {_outro_cta(design, news=bool(doc.get("news_source")))}"""))
     return slides
 
 

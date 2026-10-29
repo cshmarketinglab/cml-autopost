@@ -176,7 +176,12 @@ def build_caption(data: dict, cfg: dict) -> str:
         f"📝 오늘의 숙제\n{hw}",
         (f"📰 참고: {data['news_source']} 보도 · 세부 조건은 공식 공고를 꼭 확인하세요"
          if data.get("news_source") else ""),
-        cfg["design"].get("caption_save_line", "저장해두고 필요할 때 꺼내 보세요"),
+        # 뉴스 회차는 확산(공유)·팔로우, 정기 회차는 저장 유도
+        (cfg["design"].get("caption_news_cta",
+                           "📤 주변 사장님한테도 공유해 주세요\n이런 소식은 아는 사람만 챙겨요\n\n🔔 다음 소식도 놓치지 않게 "
+                           + cfg["brand"].get("handle", "") + " 팔로우")
+         if data.get("news_source") else
+         cfg["design"].get("caption_save_line", "저장해두고 필요할 때 꺼내 보세요")),
         tags,
     ]
     return "\n\n".join(b for b in blocks if b)
