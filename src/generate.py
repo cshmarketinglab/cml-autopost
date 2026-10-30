@@ -236,8 +236,13 @@ def main():
     # 격일 정기 캐러셀 + 중요 뉴스가 있는 날은 쉬는 날이어도 뉴스 캐러셀 추가
     news_item = pick_carousel_news(cfg, d, history)
     if scheduled or news_item:
-        queue["carousel"] = gen_carousel(cfg, d, history, news_item)
-        car = queue["carousel"]
+        try:
+            queue["carousel"] = gen_carousel(cfg, d, history, news_item)
+        except Exception as e:  # noqa: BLE001 — 캐러셀이 실패해도 쓰레드 초안은 살린다
+            print(f"⚠️ 캐러셀 생성 실패(쓰레드는 정상 진행): {e}")
+            queue["carousel_error"] = str(e)[:300]
+    car = queue["carousel"]
+    if car:
         history["carousel_topics"].append(car["topic"])
         if car.get("news_based"):
             history["last_carousel_news_date"] = d.isoformat()

@@ -35,6 +35,9 @@ def body(d: date) -> str:
         lines += [f"### {i}. 쓰레드 · {TYPE_KO.get(t['type'], t['type'])} · {t['publish_at'][11:16]} · {len(t['text'])}자",
                   "```", t["text"], "```", ""]
     c = q.get("carousel")
+    if q.get("carousel_error"):
+        lines += ["> ⚠️ 오늘 캐러셀 생성 실패 — 쓰레드만 올라옵니다. 캐러셀이 필요하면 Actions에서 '다시 생성' 체크 후 재실행",
+                  f"> 오류: {q['carousel_error'][:150]}", ""]
     if c:
         n = len(q["threads"]) + 1
         lines += [f"### {n}. 인스타 캐러셀 · {c['publish_at'][11:16]} · {c.get('kicker', '')} · {c['topic']}", ""]

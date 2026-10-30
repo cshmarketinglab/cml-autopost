@@ -15,6 +15,31 @@ def _extract_json(text: str) -> dict:
     return json.loads(text[start : end + 1])
 
 
+def _normalize(d):
+    """도구 응답 정리: {"result": {...}} 같은 바깥 포장 벗기기 + 문자열로 들어온 JSON 값 풀기."""
+    for _ in range(3):
+        if isinstance(d, str):
+            try:
+                d = json.loads(d)
+                continue
+            except ValueError:
+                break
+        if isinstance(d, dict) and len(d) == 1:
+            (v,) = d.values()
+            if isinstance(v, (dict, str)) and not (isinstance(v, str) and not v.strip()[:1] in "{["):
+                d = v
+                continue
+        break
+    if isinstance(d, dict):
+        for k, v in list(d.items()):
+            if isinstance(v, str) and v.strip()[:1] in "[{":
+                try:
+                    d[k] = json.loads(v)
+                except ValueError:
+                    pass
+    return d
+
+
 def ask_json(model: str, system: str, user: str, max_tokens: int = 4000, retries: int = 2) -> dict:
     if os.environ.get("MOCK_LLM"):  # 로컬 테스트용
         from mock_llm import mock_response
@@ -22,7 +47,9 @@ def ask_json(model: str, system: str, user: str, max_tokens: int = 4000, retries
 
     client = anthropic.Anthropic()  # ANTHROPIC_API_KEY 환경변수 사용
     # 도구 호출 형식으로 받으면 API가 JSON 구조를 보장 → 본문 속 따옴표 등으로 깨지는 문제 방지
-    tool = {"name": "output", "description": "요청된 JSON 결과를 그대로 담아 제출",
+    tool = {"name": "output",
+            "description": "결과 제출. 요청된 출력 형식의 최상위 키들(예: topic, sections, posts, picks)을 "
+                           "그대로 이 도구의 인자로 넣는다. result·data 같은 키로 한 번 더 감싸지 말 것.",
             "input_schema": {"type": "object", "additionalProperties": True}}
     extra = {"system": system} if system else {}
     last_err = None
@@ -35,9 +62,9 @@ def ask_json(model: str, system: str, user: str, max_tokens: int = 4000, retries
                 tools=[tool], tool_choice={"type": "auto"}, **extra)
             for b in msg.content:
                 if b.type == "tool_use" and isinstance(b.input, dict) and b.input:
-                    return b.input
+                    return _normalize(b.input)
             text = "".join(getattr(b, "text", "") for b in msg.content)
-            return _extract_json(text)  # 도구 대신 글로 답한 경우
+            return _normalize(_extract_json(text))  # 도구 대신 글로 답한 경우
         except anthropic.BadRequestError as e:
             # 도구 자체를 못 쓰는 경우 → 예전 방식(텍스트 JSON)으로 한 번 더
             last_err = e
