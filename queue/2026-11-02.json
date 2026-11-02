@@ -19,8 +19,9 @@
       "pillar": "맡겼는데 뭘 했는지 모르는 마케팅 답답함 → 투명한 월간 보고 방식",
       "text": "맡겨놨는데 뭘 하고 있는지 모르겠는 마케팅, 제일 답답하잖아.\n\n나는 한 달에 한 일을 그대로 보여줘.\n· 플레이스 소식 작성\n· 리뷰 답글 가이드\n· 월간 통계 + 컨설팅\n\n숨기지 않는 마케팅, 이게 내 방식이야.\n\n먼저 가게 네이버 플레이스를 보고 개선점을 상세하게 알려줄게. 진단은 무료야.\n\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해줘.",
       "approved": true,
-      "status": "pending",
-      "approved_at": "2026-11-02T08:46:00.980745+09:00"
+      "status": "failed",
+      "approved_at": "2026-11-02T08:46:00.980745+09:00",
+      "error": "HTTP 400: {'message': 'Error validating access token: You cannot access the app till you log in to www.threads.com and follow the instructions given.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'AFhfCbLayH2b1KnfyvvkiTo'}"
     },
     {
       "slot": "evening",
