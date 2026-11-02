@@ -30,8 +30,9 @@
       "pillar": "재료값 인상 속 메뉴 가격 올릴지 고민하는 마음",
       "text": "메뉴판 앞에서 계산기만 세 번째 두드리는 밤.\n\n재료값은 올랐는데\n올리면 단골이 서운해할까 싶고\n안 올리면 내 손에 남는 게 있나 싶어.\n\n가격을 올리는 건 배신이 아닌데\n사장 마음은 자꾸 미안한 쪽으로 기울어.\n\n그렇게 오래 고민하는 사람이 만드는 가게니까, 손님도 그 마음은 알 거야.",
       "approved": true,
-      "status": "pending",
-      "approved_at": "2026-11-02T08:46:00.980748+09:00"
+      "status": "failed",
+      "approved_at": "2026-11-02T08:46:00.980748+09:00",
+      "error": "HTTP 400: {'message': 'Error validating access token: You cannot access the app till you log in to www.threads.com and follow the instructions given.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'AF61vDYcfeAH-K6hJjDYzBV'}"
     }
   ],
   "carousel": null
