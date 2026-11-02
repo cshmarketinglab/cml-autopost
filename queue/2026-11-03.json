@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-03",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "news",
+      "publish_at": "2026-11-03T08:10:00+09:00",
+      "pillar": "광고비 오르는데 클릭은 줄어드는 기사 → 광고만 믿기 불안한 사장 속마음",
+      "text": "광고비는 오르는데 클릭은 오히려 줄었다는 기사 봤어?\n미국 동네 가게 얘기라는데 남 일 같지가 않더라.\n\n돈은 더 넣는데 사람은 덜 온다니.\n끊으면 아예 사라질 것 같고, 계속 돌리자니 아깝고.\n그래서 광고 얘기만 나오면 속이 복잡해지는 거 같아.\n\n너는 요즘 광고비랑 공짜로 챙기는 것들 중에 어디에 더 신경 쓰고 있어?",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-11-03T12:20:00+09:00",
+      "pillar": "내가 일하는 방식 소개형: NELVAR 6단계와 무료 플레이스 진단",
+      "text": "플레이스 일, 나는 뭘 올리는 것부터 안 해.\n\n사장님 가게가 뭘 원하는지 묻는 것부터 시작해.\nNELVAR라는 6단계로 진행해.\nNeed → Explore → Listup → Verify → Action → Review/Share\n\n식당, 카페, 펍, 숙소, 미용실까지 현장에서 직접 맡으면서 다듬은 순서야.\n\n내 가게 플레이스가 어떤 상태인지 궁금하면\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해줘.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-11-03T20:40:00+09:00",
+      "pillar": "오픈 전 새벽 준비, 아무도 모르는 사장의 시간",
+      "text": "손님은 문 열고 들어오는 순간부터만 가게를 봐.\n\n근데 사장님 하루는 그 전에 반쯤 지나 있잖아.\n재료 손질하고, 불 켜고, 바닥 닦고.\n\n아무도 안 알아줘도 그 시간이 가게 맛이고 분위기야.\n\n오늘도 제일 먼저 불 켠 사장님, 그 시간 헛된 거 아니야.",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": null,
+  "carousel_error": "Claude 응답 JSON 파싱 실패: JSON 없음"
+}
