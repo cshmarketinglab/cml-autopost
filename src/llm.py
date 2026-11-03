@@ -37,7 +37,18 @@ def _normalize(d):
                     d[k] = json.loads(v)
                 except ValueError:
                     pass
-    return d
+    return _unescape(d)
+
+
+def _unescape(x):
+    """줄바꿈이 실제 줄바꿈 대신 글자 '\\n'으로 들어온 경우 복원 (캡션·표지에 '\\n'이 그대로 찍히는 문제)."""
+    if isinstance(x, str):
+        return x.replace("\\r\\n", "\n").replace("\\n", "\n")
+    if isinstance(x, list):
+        return [_unescape(v) for v in x]
+    if isinstance(x, dict):
+        return {k: _unescape(v) for k, v in x.items()}
+    return x
 
 
 def ask_json(model: str, system: str, user: str, max_tokens: int = 4000, retries: int = 2) -> dict:

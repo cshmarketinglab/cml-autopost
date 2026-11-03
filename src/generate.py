@@ -171,7 +171,7 @@ def build_caption(data: dict, cfg: dict) -> str:
         tags = tags.split()
     tags = " ".join(t if t.startswith("#") else f"#{t}" for t in tags[:8])
     blocks = [
-        data["hook"].strip(),
+        data["hook"].replace("\\n", "\n").strip(),
         f"{data.get('kicker', '').strip()} 정리\n{tips}",
         f"📝 오늘의 숙제\n{hw}",
         (f"📰 참고: {data['news_source']} 보도 · 세부 조건은 공식 공고를 꼭 확인하세요"
