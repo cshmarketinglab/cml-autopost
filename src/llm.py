@@ -55,16 +55,28 @@ def ask_json(model: str, system: str, user: str, max_tokens: int = 4000, retries
     last_err = None
     # 일부 모델은 도구 강제(tool_choice=tool)를 지원하지 않음 → 자동 선택 + 지시문으로 도구 사용 유도
     ask = user + "\n\n(결과는 반드시 output 도구를 호출해서 제출할 것. 본문 텍스트로 쓰지 말 것.)"
-    for _ in range(retries + 1):
+    for attempt in range(retries + 1):
         try:
-            msg = client.messages.create(
-                model=model, max_tokens=max_tokens, messages=[{"role": "user", "content": ask}],
-                tools=[tool], tool_choice={"type": "auto"}, **extra)
+            if attempt == retries and attempt > 0:
+                # 마지막 시도: 도구 없이 텍스트 JSON으로 (도구 응답이 계속 비거나 잘리는 경우 대비)
+                msg = client.messages.create(model=model, max_tokens=max_tokens,
+                                             messages=[{"role": "user", "content": user}], **extra)
+            else:
+                msg = client.messages.create(
+                    model=model, max_tokens=max_tokens, messages=[{"role": "user", "content": ask}],
+                    tools=[tool], tool_choice={"type": "auto"}, **extra)
+            if msg.stop_reason == "max_tokens":
+                # 출력이 잘림 → 한도를 늘려 재시도
+                max_tokens = min(max_tokens * 2, 16000)
+                raise ValueError(f"응답이 길이 한도에서 잘림(stop=max_tokens) → {max_tokens}으로 재시도")
             for b in msg.content:
                 if b.type == "tool_use" and isinstance(b.input, dict) and b.input:
                     return _normalize(b.input)
             text = "".join(getattr(b, "text", "") for b in msg.content)
-            return _normalize(_extract_json(text))  # 도구 대신 글로 답한 경우
+            try:
+                return _normalize(_extract_json(text))  # 도구 대신 글로 답한 경우
+            except ValueError as e:
+                raise ValueError(f"{e} (stop={msg.stop_reason}, 응답 앞부분: {text[:120]!r})") from e
         except anthropic.BadRequestError as e:
             # 도구 자체를 못 쓰는 경우 → 예전 방식(텍스트 JSON)으로 한 번 더
             last_err = e

@@ -102,7 +102,7 @@ def gen_carousel(cfg: dict, d: date, history: dict, news_item: dict | None = Non
             "\n- 정부·정치 평가 금지. 첫 section에서 무슨 변화인지 한 문장으로만 짚고 바로 실천 팁으로."
         )
     for _ in range(3):
-        data = ask_json(cfg["model"], system, user, max_tokens=4000)
+        data = ask_json(cfg["model"], system, user, max_tokens=8000)
         problems = check_carousel(data)
         if not problems:
             break
