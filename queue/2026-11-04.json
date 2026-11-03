@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-04",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "news",
+      "publish_at": "2026-11-04T08:10:00+09:00",
+      "pillar": "소상공인 SNS 마케팅 지원 확대 기사 → 지원받아도 뭘 올릴지 몰라 멈추는 속마음",
+      "text": "소상공인 SNS 마케팅 지원 대상을 늘린다는 기사 봤어?\n\n반가운 소식인데 사장님 속마음은 이럴 것 같아.\n'지원은 좋은데… 그래서 뭘 올리지?'\n\n사진은 폰에 가득한데\n막상 올리려면 손이 멈추잖아.\n장사하느라 글 쓸 시간도 없고.\n\n도구보다 어려운 건 매번 '뭘 올릴까'더라.\n\n너는 가게 SNS에 마지막으로 뭐 올렸어?",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-11-04T12:20:00+09:00",
+      "pillar": "오해 깨기형: AI 검색(GEO) 경험 + 결국 시작은 플레이스 기본기 → 무료 진단",
+      "text": "손님이 ChatGPT한테 '근처 분위기 좋은 술집 추천해줘' 하고 묻는 시대가 슬슬 오고 있어.\n\n나는 술집·카페·미용실 키워드를 ChatGPT 검색 답변에 노출시켜 본 경험이 있어.\n\n근데 출발점은 결국 네이버 플레이스 기본기야. 정보가 제대로 정리돼 있어야 어디서든 읽히거든.\n\n가게 플레이스를 보고 개선점을 상세하게 짚어줄게.\n\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-11-04T20:40:00+09:00",
+      "pillar": "오픈 전 새벽 준비와 마감 후 정산의 피로",
+      "text": "셔터 올리기 전에 이미 체력 반은 썼어.\n\n새벽에 재료 받고, 손질하고, 불 올리고.\n손님 한 명 오기도 전에 땀부터 나지.\n\n마감하면 정산에 청소까지.\n퇴근길엔 말하기도 싫고.\n\n그래도 그렇게 쌓은 하루가 가게를 지켜. 오늘도 고생했어.\n\n너네 가게 하루 중 제일 힘든 시간은 언제야?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": {
+    "topic": "정부 소상공인 SNS 마케팅 지원 확대(750곳→1200곳), 사장님이 지금 준비할 것",
+    "episode": 4,
+    "kicker": "동네 가게 마케팅 수업 4교시 · 이슈 특강",
+    "news_based": "정부, 소상공인 SNS 마케팅 지원 ‘750곳→1200곳’ 확 늘린다",
+    "cover": {
+      "title": "지원 늘어난다는데\n우리 가게도 될까",
+      "photo_query": "cafe owner smiling at counter"
+    },
+    "sections": [
+      {
+        "heading": "조건은 공식 공고에서 확인한다",
+        "body": "소상공인 SNS 마케팅 지원 대상이 750곳에서 1200곳으로 늘어난다는 소식이다. 신청 자격과 시기, 지원 내용은 기사 요약만으로 알 수 없다.\n\n**기사 원문과 공식 공고를 직접 열어 대상 조건부터 확인한다.** 블로그나 커뮤니티의 요약은 틀린 부분이 섞일 수 있다.",
+        "photo_query": "person reading documents laptop desk"
+      },
+      {
+        "heading": "올릴 사진을 미리 모아 둔다",
+        "body": "지원을 받든 안 받든 계정은 결국 사장님이 채우는 공간이다. 공고가 열린 뒤 급하게 찍으면 사진이 매장 분위기와 따로 놀기 쉽다.\n\n**손님 없는 틈에 대표 메뉴, 입구, 주방 손길을 한 장씩 찍어 둔다.** 이 사진들이 나중에 게시물의 재료가 된다.",
+        "photo_query": "chef plating dish closeup"
+      },
+      {
+        "heading": "고정 게시물에 안내를 모은다",
+        "body": "손님이 계정에서 가장 자주 찾는 정보는 대체로 위치와 영업시간, 예약 방법이다. 이것이 흩어져 있으면 손님은 찾다가 포기한다.\n\n**위치, 영업시간, 예약 방법을 한 장에 담아 첫 번째 고정 게시물로 올린다.** 휴무일이 바뀌면 이 게시물만 고치면 된다.",
+        "photo_query": "notebook and pen on wooden table"
+      },
+      {
+        "heading": "오늘의 숙제: 프로필 첫 줄 쓰기",
+        "body": "공고가 열리든 아니든 오늘 할 일은 하나다. 인스타 프로필을 열어 첫 줄을 손님 눈으로 읽어 본다.\n\n**동네와 업종이 한눈에 보이도록 첫 줄을 다시 쓴다.** 고쳤다면 이 게시물을 저장해 두고 공고가 뜰 때 다시 꺼내 본다.",
+        "photo_query": "hand holding smartphone in cafe"
+      }
+    ],
+    "caption": "될지는 공식 공고에서 확인하고\n계정은 오늘부터 정리해요\n\n동네 가게 마케팅 수업 4교시 · 이슈 특강 정리\n✔️ 조건은 공식 공고에서 확인한다\n✔️ 올릴 사진을 미리 모아 둔다\n✔️ 고정 게시물에 안내를 모은다\n\n📝 오늘의 숙제\n오늘의 숙제: 프로필 첫 줄 쓰기\n\n📰 참고: 서울경제 보도 · 세부 조건은 공식 공고를 꼭 확인하세요\n\n📤 주변 사장님한테도 공유해 주세요\n이런 소식은 아는 사람만 챙겨요\n\n🔔 다음 소식도 놓치지 않게 @cml.place 팔로우\n\n#자영업자 #소상공인 #사장님 #SNS마케팅 #소상공인지원 #인스타마케팅 #가게홍보",
+    "photos": [
+      {
+        "slide": "cover",
+        "id": "pb:7115394",
+        "provider": "Pixabay",
+        "photographer": "Chuotanhls",
+        "url": "https://pixabay.com/photos/girl-smile-camera-photographer-7115394/",
+        "query": "cafe owner smiling at counter"
+      },
+      {
+        "slide": "s1",
+        "id": "pb:849825",
+        "provider": "Pixabay",
+        "photographer": "StartupStockPhotos",
+        "url": "https://pixabay.com/photos/student-typing-keyboard-text-849825/",
+        "query": "person reading documents laptop desk"
+      },
+      {
+        "slide": "s2",
+        "id": "pb:4625935",
+        "provider": "Pixabay",
+        "photographer": "salahgraphic",
+        "url": "https://pixabay.com/photos/chef-catering-food-4625935/",
+        "query": "chef plating dish closeup"
+      },
+      {
+        "slide": "s3",
+        "id": "pb:7188564",
+        "provider": "Pixabay",
+        "photographer": "bohacekmarek",
+        "url": "https://pixabay.com/photos/coffee-winter-cafe-caffeine-cup-7188564/",
+        "query": "notebook and pen on wooden table"
+      },
+      {
+        "slide": "s4",
+        "id": "pb:4646854",
+        "provider": "Pixabay",
+        "photographer": "sweetlouise",
+        "url": "https://pixabay.com/photos/mobile-phone-cellphone-phone-4646854/",
+        "query": "hand holding smartphone in cafe"
+      }
+    ],
+    "missing_photos": 0,
+    "overflow_slides": [],
+    "images": [
+      "out/2026-11-04/01.jpg",
+      "out/2026-11-04/02.jpg",
+      "out/2026-11-04/03.jpg",
+      "out/2026-11-04/04.jpg",
+      "out/2026-11-04/05.jpg",
+      "out/2026-11-04/06.jpg"
+    ],
+    "publish_at": "2026-11-04T19:10:00+09:00",
+    "approved": false,
+    "status": "pending"
+  }
+}
