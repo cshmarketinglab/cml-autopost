@@ -8,6 +8,7 @@
 """
 import os
 import random
+import time
 from pathlib import Path
 
 import requests
@@ -72,11 +73,16 @@ def fetch(query: str, dest: Path, orientation: str, used: set, fallbacks: list[s
     backup = None  # 전부 '안 맞음'이면 첫 검색어의 후보라도 사용 (검정 화면보다 낫다)
     for name, search in providers:
         for q in [query, *fallbacks]:
-            try:
-                photos = [p for p in search(q, orientation) if p["id"] not in used and p["download"]]
-            except requests.RequestException as e:
-                print(f"{name} 검색 실패({q}): {e}")
-                break  # 이 서비스 장애 → 다음 서비스로
+            photos = None
+            for wait in (0, 10):  # 일시 오류·요청 한도(429) 대비 한 번 더
+                time.sleep(wait)
+                try:
+                    photos = [p for p in search(q, orientation) if p["id"] not in used and p["download"]]
+                    break
+                except requests.RequestException as e:
+                    print(f"{name} 검색 실패({q}, {wait}s 대기 후): {e}")
+            if photos is None:
+                break  # 재시도도 실패 = 서비스 장애 → 다음 서비스로 (무한 대기 방지)
             if not photos:
                 continue
             # 상위 결과 중 후보를 섞어 뽑고(다른 계정과 겹침 방지), Claude가 내용과 맞는 사진을 고른다
@@ -102,11 +108,17 @@ def fetch(query: str, dest: Path, orientation: str, used: set, fallbacks: list[s
 
 
 def _save(photo: dict, dest: Path, used: set, q: str) -> dict | None:
-    try:
-        r = requests.get(photo["download"], timeout=TIMEOUT)
-        r.raise_for_status()
-    except requests.RequestException as e:
-        print(f"{photo['provider']} 다운로드 실패: {e}")
+    r = None
+    for wait in (0, 5):
+        time.sleep(wait)
+        try:
+            r = requests.get(photo["download"], timeout=TIMEOUT)
+            r.raise_for_status()
+            break
+        except requests.RequestException as e:
+            print(f"{photo['provider']} 다운로드 실패: {e}")
+            r = None
+    if r is None:
         return None
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(r.content)
