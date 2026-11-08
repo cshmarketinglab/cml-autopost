@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-09",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "news",
+      "publish_at": "2026-11-09T08:10:00+09:00",
+      "pillar": "배달 수수료 상한제가 배달비 상승으로 이어질 수 있다는 지적 기사 → 사장님 속마음",
+      "text": "수수료 상한이 생겨도 배달비가 오르면 손님이 줄 수 있다는 기사 봤어.\n\n사장 입장에선 마음이 복잡하지.\n내 몫이 조금 남는 건 좋은데\n주문 자체가 줄면 그게 더 무섭거든.\n\n좋은 소식인지 아닌지 한 번에 판단이 안 돼.\n\n너네 가게는 배달 비중 어느 정도야?",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-11-09T12:20:00+09:00",
+      "pillar": "체크리스트형: 플레이스 상태 점검 후 무료 진단 신청 유도",
+      "text": "플레이스 체크리스트. 이 중 2개 이상이면 연락 줘.\n\n- 대표사진이 몇 달 전 그대로\n- 소식 탭이 비어 있음\n- 리뷰 답글은 손 가는 대로\n- 메뉴·영업시간 정보가 오래됨\n- 뭘 손대야 할지 모르겠음\n\n가게 플레이스를 직접 보고 개선점을 하나하나 짚어서 전달해줄게. 진단은 무료야.\n\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-11-09T20:40:00+09:00",
+      "pillar": "가족·지인의 '장사 잘 돼?' 질문에 답이 안 나오는 마음",
+      "text": "'장사 잘 돼?' 이 한마디에 바로 답이 안 나오는 날이 있어.\n\n잘 된다고 하자니 통장이 떠오르고\n안 된다고 하자니 걱정시킬 것 같고\n\n그래서 그냥 \"그럭저럭\" 하고 웃고 말지.\n\n근데 그 그럭저럭을 매일 버티는 것도 실력이야.\n\n너는 뭐라고 대답해?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": {
+    "topic": "메뉴판 사진과 설명 점검하기",
+    "episode": 7,
+    "kicker": "동네 가게 마케팅 수업 7교시",
+    "news_based": "",
+    "cover": {
+      "title": "메뉴판 사진만\n잘 찍으면 될까",
+      "photo_query": "restaurant owner holding menu smiling"
+    },
+    "sections": [
+      {
+        "heading": "사진 속 글씨가 폰에서 읽혀야 한다",
+        "body": "메뉴판을 찍어 올려놓고 안심하는 사장님이 많다. 그런데 손님은 작은 폰 화면으로 본다. 글씨가 뭉개져 있으면 가격도 메뉴도 읽히지 않고 넘어가기 쉽다.\n\n**내 폰으로 사진을 열어 확대 없이 글씨가 읽히는지 본다.** 안 읽히면 위에서 반듯하게, 그림자 없이 다시 찍는다.",
+        "photo_query": "hand holding smartphone in cafe"
+      },
+      {
+        "heading": "대표 메뉴 세 개는 맨 위에 둔다",
+        "body": "손님은 메뉴판을 끝까지 읽지 않는 경우가 많다. 대체로 위쪽에서 먼저 고르고 나머지는 훑어본다. 팔고 싶은 메뉴가 아래 구석에 있으면 눈에 덜 띈다.\n\n**가장 자신 있는 메뉴 세 개가 메뉴판 맨 위에 오도록 다시 배치한다.** 인쇄가 부담이면 플레이스 사진 순서부터 바꾼다.",
+        "photo_query": "chef plating dish closeup"
+      },
+      {
+        "heading": "설명은 한 줄, 손님 질문에 답한다",
+        "body": "전화로 자주 받는 질문이 있다. 맵기는 어느 정도인지, 두 명이 먹기에 충분한지, 포장이 되는지 같은 것들이다. 이 질문이 곧 메뉴 설명에 들어갈 문장이다.\n\n**메뉴 이름 옆에 '2인 가능'처럼 짧은 한 줄만 붙인다.** 길게 쓸수록 읽히지 않는다.",
+        "photo_query": "waiter talking to customer at table"
+      },
+      {
+        "heading": "바뀐 가격은 사진도 같이 바꾼다",
+        "body": "가격을 올렸는데 예전 메뉴판 사진이 그대로 남아 있는 가게가 있다. 손님은 사진 속 가격을 보고 왔다가 계산대에서 다른 금액을 만난다. 작은 어긋남이 불편한 첫인상이 된다.\n\n**가격이나 메뉴가 바뀐 날, 사진 교체도 같은 날 끝낸다.** 계절 메뉴가 끝났다면 그 사진부터 내린다.",
+        "photo_query": "hands writing notes in notebook cafe"
+      },
+      {
+        "heading": "오늘은 메뉴판 사진 하나만 본다",
+        "body": "손님이 되어 내 가게 플레이스를 폰으로 열어본다. 메뉴판 사진을 눌러 보면 읽히는지, 가격이 맞는지 금방 알 수 있다.\n\n**올라간 메뉴판 사진 중 읽기 어렵거나 가격이 틀린 한 장을 오늘 바꾼다.** 틀린 곳이 없다면 오늘 숙제는 이미 끝난 것이다.",
+        "photo_query": "person looking at smartphone restaurant table"
+      }
+    ],
+    "caption": "메뉴판 사진은 예쁜 것보다\n폰에서 읽히는 게 먼저예요\n\n동네 가게 마케팅 수업 7교시 정리\n✔️ 사진 속 글씨가 폰에서 읽혀야 한다\n✔️ 대표 메뉴 세 개는 맨 위에 둔다\n✔️ 설명은 한 줄, 손님 질문에 답한다\n✔️ 바뀐 가격은 사진도 같이 바꾼다\n\n📝 오늘의 숙제\n오늘은 메뉴판 사진 하나만 본다\n\n저장해두고 필요할 때 꺼내 보세요\n\n#자영업자 #소상공인 #사장님 #메뉴판 #네이버플레이스 #식당마케팅 #카페운영",
+    "photos": [
+      {
+        "slide": "cover",
+        "id": "pb:10187366",
+        "provider": "Pixabay",
+        "photographer": "knuckles_echidna",
+        "url": "https://pixabay.com/photos/spring-rabbit-lady-girl-portrait-10187366/",
+        "query": "restaurant owner holding menu smiling"
+      },
+      {
+        "slide": "s1",
+        "id": "pb:3236059",
+        "provider": "Pixabay",
+        "photographer": "sweetlouise",
+        "url": "https://pixabay.com/photos/woman-mobile-phone-3236059/",
+        "query": "hand holding smartphone in cafe"
+      },
+      {
+        "slide": "s2",
+        "id": "pb:1846083",
+        "provider": "Pixabay",
+        "photographer": "Pexels",
+        "url": "https://pixabay.com/photos/french-fries-potato-appetizer-1846083/",
+        "query": "chef plating dish closeup"
+      },
+      {
+        "slide": "s3",
+        "id": "pb:498420",
+        "provider": "Pixabay",
+        "photographer": "Life-Of-Pix",
+        "url": "https://pixabay.com/photos/bar-lounge-cocktail-alcohol-glass-498420/",
+        "query": "waiter talking to customer at table"
+      },
+      {
+        "slide": "s4",
+        "id": "pb:2178656",
+        "provider": "Pixabay",
+        "photographer": "Pexels",
+        "url": "https://pixabay.com/photos/notebook-hand-pen-write-writing-2178656/",
+        "query": "hands writing notes in notebook cafe"
+      },
+      {
+        "slide": "s5",
+        "id": "pb:8841972",
+        "provider": "Pixabay",
+        "photographer": "Surprising_Media",
+        "url": "https://pixabay.com/photos/girlie-looking-phone-sitting-flesh-8841972/",
+        "query": "person looking at smartphone restaurant table"
+      }
+    ],
+    "missing_photos": 0,
+    "overflow_slides": [],
+    "images": [
+      "out/2026-11-09/01.jpg",
+      "out/2026-11-09/02.jpg",
+      "out/2026-11-09/03.jpg",
+      "out/2026-11-09/04.jpg",
+      "out/2026-11-09/05.jpg",
+      "out/2026-11-09/06.jpg",
+      "out/2026-11-09/07.jpg"
+    ],
+    "publish_at": "2026-11-09T19:10:00+09:00",
+    "approved": false,
+    "status": "pending"
+  }
+}
