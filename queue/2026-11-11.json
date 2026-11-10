@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-11",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "news",
+      "publish_at": "2026-11-11T08:10:00+09:00",
+      "pillar": "배달앱 과징금 소식에 싸늘한 소상공인 반응, 뉴스와 내 정산 내역은 별개",
+      "text": "과징금 뉴스보다 내 정산서가 먼저 궁금했지?\n\n배달앱 과징금 소식에 사장님들 반응이 싸늘하다는 기사 봤어.\n\n뉴스엔 큰 얘기가 오가는데\n내 정산 내역 열어보면 수수료는 그대로인 느낌.\n\n\"그래서 나는 뭐가 달라지는데?\"\n이 한마디가 진짜 속마음이잖아.\n\n사장님은 이 소식 보고 제일 먼저 뭐부터 확인했어?",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-11-11T12:20:00+09:00",
+      "pillar": "NELVAR 6단계 프로세스 소개형, 세팅 4주, 숨기지 않는 마케팅",
+      "text": "세팅 4주, 여섯 단계. 내가 플레이스를 만지는 순서야.\n\nN 사장님 얘기부터 듣고\nE 동네와 주변 가게를 살피고\nL 손볼 것들을 추려서\nV 맞는지 검증한 다음\nA 실행하고\nR 돌아보고 공유해.\n\n감으로 바꾸지 않고, 뭘 했는지 숨기지 않는 마케팅이 내 방식이야.\n\n내 가게 플레이스가 궁금하면\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해줘.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-11-11T20:40:00+09:00",
+      "pillar": "쉬는 날에도 가게 생각이 떠나지 않음",
+      "text": "쉬는 날 카페 가서 남의 가게 인테리어만 보고 있더라.\n\n'저 조명 괜찮네.'\n'저 메뉴판은 글씨가 크네.'\n'손님 몇 팀이지…'\n\n쉬러 나왔는데 머릿속은 또 출근 중.\n\n이거 병 아니야. 그만큼 가게를 아끼는 거지.\n\n사장님은 쉬는 날 어디서 제일 먼저 가게 생각 나?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": {
+    "topic": "인스타 프로필 첫 화면 정리",
+    "episode": 8,
+    "kicker": "동네 가게 마케팅 수업 8교시",
+    "news_based": "",
+    "cover": {
+      "title": "인스타 첫 화면\n손님이 정말 볼까",
+      "photo_query": "woman looking at smartphone in cafe"
+    },
+    "sections": [
+      {
+        "heading": "이름 칸에 동네와 업종을 넣는다",
+        "body": "손님은 가게 이름을 검색해 목록에서 계정을 고른다. 이름만 덩그러니 보이면 카페인지 술집인지, 어느 동네인지 알 수 없다.\n\n**이름 칸에 가게 이름 옆으로 동네와 업종을 함께 적는다.** 검색 결과 목록에도 보이는 자리라 대체로 손님이 가장 먼저 읽는 글자다.",
+        "photo_query": "hand typing on smartphone search"
+      },
+      {
+        "heading": "소개글 세 줄에 방문 정보를 몰아 담는다",
+        "body": "프로필에 들어온 손님이 알고 싶은 건 감성 문구가 아니라 오늘 열었는지, 어디인지다. 소개글을 시처럼 쓰면 정작 필요한 정보를 찾으러 다른 앱으로 넘어간다.\n\n**첫 줄은 메뉴, 둘째 줄은 영업시간과 휴무, 셋째 줄은 찾아오는 길로 정해둔다.** 휴무가 바뀔 때마다 이 자리부터 고친다.",
+        "photo_query": "small shop door open sign morning"
+      },
+      {
+        "heading": "프로필 사진은 작은 원에서도 읽혀야 한다",
+        "body": "프로필 사진은 손가락 한 마디만 한 원으로 보인다. 간판 전체를 넣거나 메뉴를 넓게 찍으면 무엇인지 알아보기 어렵다.\n\n**원 안에 하나만 크게, 로고나 대표 메뉴 한 접시를 가운데에 담는다.** 올리기 전에 작게 줄여 보고 형태가 구분되는지 확인해 보자.",
+        "photo_query": "coffee cup closeup top view"
+      },
+      {
+        "heading": "고정 게시물 세 개로 첫 화면을 채운다",
+        "body": "프로필 첫 화면에는 최근 게시물이 격자로 깔린다. 행사 공지나 이벤트 이미지가 한꺼번에 올라가 있으면 가게가 무슨 곳인지 흐려진다.\n\n**고정 게시물 세 개를 대표 메뉴, 매장 내부, 찾아오는 길 순으로 골라 올려둔다.** 하이라이트는 메뉴·위치·예약 안내 정도로만 나눈다.",
+        "photo_query": "restaurant interior warm lights empty"
+      },
+      {
+        "heading": "오늘은 내 계정을 손님 눈으로 본다",
+        "body": "오늘 할 일은 하나다. 직원이나 가족의 폰으로 우리 가게 계정을 열고, 3초 안에 무슨 가게인지, 어디인지, 언제 여는지 보이는지 확인한다.\n\n**안 보이는 것 하나만 골라 지금 바로 고친다.** 대체로 이름 칸에 동네를 넣는 일이 가장 빠르고, 1분이면 끝난다.",
+        "photo_query": "two people looking at phone together"
+      }
+    ],
+    "caption": "프로필 3초 안에\n무슨 가게인지 보여야 해요\n\n동네 가게 마케팅 수업 8교시 정리\n✔️ 이름 칸에 동네와 업종을 넣는다\n✔️ 소개글 세 줄에 방문 정보를 몰아 담는다\n✔️ 프로필 사진은 작은 원에서도 읽혀야 한다\n✔️ 고정 게시물 세 개로 첫 화면을 채운다\n\n📝 오늘의 숙제\n오늘은 내 계정을 손님 눈으로 본다\n\n저장해두고 필요할 때 꺼내 보세요\n\n#자영업자 #소상공인 #사장님 #인스타그램마케팅 #인스타프로필 #가게홍보 #카페사장 #식당마케팅",
+    "photos": [
+      {
+        "slide": "cover",
+        "id": "pb:4387943",
+        "provider": "Pixabay",
+        "photographer": "JerzyGórecki",
+        "url": "https://pixabay.com/photos/girl-telephone-smartphone-beauty-4387943/",
+        "query": "woman looking at smartphone in cafe"
+      },
+      {
+        "slide": "s1",
+        "id": "pb:849822",
+        "provider": "Pixabay",
+        "photographer": "StartupStockPhotos",
+        "url": "https://pixabay.com/photos/student-typing-keyboard-text-woman-849822/",
+        "query": "hand typing on smartphone search"
+      },
+      {
+        "slide": "s2",
+        "id": "pb:4033043",
+        "provider": "Pixabay",
+        "photographer": "analogicus",
+        "url": "https://pixabay.com/photos/open-sign-a-notice-wood-painted-4033043/",
+        "query": "small shop door open sign morning"
+      },
+      {
+        "slide": "s3",
+        "id": "pb:6815800",
+        "provider": "Pixabay",
+        "photographer": "thelegendreturn",
+        "url": "https://pixabay.com/photos/drink-coffee-caffeine-foam-cup-6815800/",
+        "query": "coffee cup closeup top view"
+      },
+      {
+        "slide": "s4",
+        "id": "pb:2618315",
+        "provider": "Pixabay",
+        "photographer": "StockSnap",
+        "url": "https://pixabay.com/photos/restaurant-bar-stools-lights-2618315/",
+        "query": "restaurant interior warm lights empty"
+      },
+      {
+        "slide": "s5",
+        "id": "pb:3104635",
+        "provider": "Pixabay",
+        "photographer": "trevoykellyphotography",
+        "url": "https://pixabay.com/photos/friendship-day-black-women-portrait-3104635/",
+        "query": "two people looking at phone together"
+      }
+    ],
+    "missing_photos": 0,
+    "overflow_slides": [],
+    "images": [
+      "out/2026-11-11/01.jpg",
+      "out/2026-11-11/02.jpg",
+      "out/2026-11-11/03.jpg",
+      "out/2026-11-11/04.jpg",
+      "out/2026-11-11/05.jpg",
+      "out/2026-11-11/06.jpg",
+      "out/2026-11-11/07.jpg"
+    ],
+    "publish_at": "2026-11-11T19:10:00+09:00",
+    "approved": false,
+    "status": "pending"
+  }
+}
