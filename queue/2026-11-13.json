@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-13",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "news",
+      "publish_at": "2026-11-13T08:10:00+09:00",
+      "pillar": "배달앱 할인액 수수료 구조 변경 기사, 기대 반 계산 반",
+      "text": "내가 쏜 할인쿠폰에도 수수료가 붙던 거, 알고 있었어?\n\n그 할인액엔 수수료를 안 매기는 쪽으로 바뀐다는 기사 봤어.\n\n반가운 소식인데\n속으론 이런 생각도 들더라.\n'다른 앱도 따라 바꿀까?'\n'내 정산서엔 실제로 어떻게 찍히지?'\n\n기대 반, 계산 반인 마음.\n\n너는 어떤 앱 정산서부터 열어볼 것 같아?",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-11-13T12:20:00+09:00",
+      "pillar": "오해 깨기형: 플레이스는 한 번 세팅하면 끝이라는 생각 → 4주 세팅 후 관리, 무료 진단",
+      "text": "플레이스는 한 번 세팅해두면 끝 아니냐고?\n\n그렇게 생각하는 사장님 많더라.\n근데 영업시간, 소식, 리뷰 답글은 가게가 살아 있는 한 계속 바뀌는 거야.\n\n나는 먼저 4주 동안 세팅을 하고, 그 뒤엔 소식 작성, 리뷰 답글 가이드, 월간 통계로 이어가.\n\n내 가게 플레이스가 지금 어떤 상태인지 궁금하면\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해줘.\n개선점 상세하게 짚어줄게.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-11-13T20:40:00+09:00",
+      "pillar": "마감 후 정산하는 밤, 사장만 아는 순간 리스트형",
+      "text": "마감 후 정산하는 밤, 사장만 아는 순간 3개.\n\n1. 숫자 보기 전에 괜히 숨부터 한 번 고르는 거\n2. 어제보다 적으면 날씨, 요일, 내 탓까지 이유부터 찾는 거\n3. 매출은 찍혔는데 남은 게 없는 것 같은 기분\n\n하루 종일 서 있었는데\n마지막에 또 계산기 앞에 서 있네.\n\n너는 이 중에 몇 번이야?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": {
+    "topic": "배민 할인액 수수료 면제, 사장님이 지금 확인할 정산·쿠폰 점검 체크리스트",
+    "episode": 9,
+    "kicker": "동네 가게 마케팅 수업 9교시 · 이슈 특강",
+    "news_based": "“연 1100억 원 부담 완화 환영”…소상공인연합회 등 5개 단체, 배민 상생 결단에 긍정 평가",
+    "cover": {
+      "title": "할인액 수수료 면제\n내 정산서에 보일까",
+      "photo_query": "cafe owner looking at smartphone"
+    },
+    "sections": [
+      {
+        "heading": "변화는 한 줄, 확인은 내 몫이다",
+        "body": "배민이 업주 부담 할인액에는 수수료를 매기지 않기로 했고, 소상공인연합회 등 5개 단체가 환영했다. 시행 시기와 조건은 기사만으론 알 수 없다.\n\n**내 가게에 해당하는지는 배민 공식 공고에서 확인하는 것이 첫 순서다.** 사장님 앱의 공지를 즐겨찾기해 두면 다시 찾기 쉽다.",
+        "photo_query": "delivery scooter city night"
+      },
+      {
+        "heading": "정산서에서 할인 항목부터 찾는다",
+        "body": "정산 내역을 열어 할인액이 어느 줄에 찍히는지부터 본다. 주문 금액, 할인액, 수수료, 입금액이 각각 어떤 항목명으로 나뉘는지 알아야 변화가 생겨도 비교할 수 있다.\n\n**항목명을 메모장에 옮겨 적어 두는 것이 비교의 출발점이다.** 헷갈리는 항목은 고객센터에 물어 이름의 뜻을 확인해 둔다.",
+        "photo_query": "calculator and receipts on desk"
+      },
+      {
+        "heading": "쿠폰마다 누가 부담하는지 적는다",
+        "body": "쓰고 있는 쿠폰과 할인을 전부 나열해 본다. 각각 업주가 부담하는지, 플랫폼이 부담하는지 구분하면 이번 변화가 닿는 쿠폰이 무엇인지 윤곽이 잡힌다.\n\n**'업주 부담' 표시가 붙은 쿠폰만 따로 한 줄씩 정리하면 된다.** 적용 대상은 공식 공고 기준으로 맞춰 보고, 애매한 건 물음표로 남겨 둔다.",
+        "photo_query": "coupons on wooden table"
+      },
+      {
+        "heading": "변화 전후 정산서를 나란히 비교한다",
+        "body": "시행 뒤 첫 정산서가 나오면 직전 정산서와 나란히 놓는다. 같은 쿠폰을 썼는데 수수료 줄이 달라졌는지, 입금액이 어떻게 달라졌는지 눈으로 확인하는 단계다.\n\n**기대보다 차이가 작거나 크다면 그 이유를 적어 두는 것이 다음 쿠폰 전략의 재료다.** 믿을 숫자는 내 정산서에 찍힌 것뿐이다.",
+        "photo_query": "two notebooks side by side desk"
+      },
+      {
+        "heading": "오늘의 숙제: 쿠폰 목록 한 장 만들기",
+        "body": "오늘은 배민 사장님 앱에서 지금 켜 둔 쿠폰과 할인을 전부 캡처한다. 이름, 업주 부담 여부, 기간 세 가지만 메모장에 한 줄씩 적으면 끝이다.\n\n**이 목록 한 장이 있으면 공식 공고를 읽을 때 내 가게 해당 여부를 바로 대조할 수 있다.** 작업은 짧게 끝난다.",
+        "photo_query": "hand holding smartphone in cafe"
+      }
+    ],
+    "caption": "할인액 수수료 면제 소식\n정산서부터 열어보세요\n\n동네 가게 마케팅 수업 9교시 · 이슈 특강 정리\n✔️ 변화는 한 줄, 확인은 내 몫이다\n✔️ 정산서에서 할인 항목부터 찾는다\n✔️ 쿠폰마다 누가 부담하는지 적는다\n✔️ 변화 전후 정산서를 나란히 비교한다\n\n📝 오늘의 숙제\n오늘의 숙제: 쿠폰 목록 한 장 만들기\n\n📰 참고: 파이낸셜투데이 보도 · 세부 조건은 공식 공고를 꼭 확인하세요\n\n📤 주변 사장님한테도 공유해 주세요\n이런 소식은 아는 사람만 챙겨요\n\n🔔 다음 소식도 놓치지 않게 @cml.place 팔로우\n\n#자영업자 #소상공인 #사장님 #배달의민족 #배민수수료 #배달앱 #정산관리 #쿠폰관리",
+    "photos": [
+      {
+        "slide": "cover",
+        "id": "pb:7862413",
+        "provider": "Pixabay",
+        "photographer": "thangshooter",
+        "url": "https://pixabay.com/photos/woman-shopping-market-lifestyle-7862413/",
+        "query": "cafe owner looking at smartphone"
+      },
+      {
+        "slide": "s1",
+        "id": "pb:7885965",
+        "provider": "Pixabay",
+        "photographer": "Tho-Ge",
+        "url": "https://pixabay.com/photos/street-art-art-graffiti-painting-7885965/",
+        "query": "delivery scooter city night"
+      },
+      {
+        "slide": "s2",
+        "id": "pb:1016299",
+        "provider": "Pixabay",
+        "photographer": "cloudhoreca",
+        "url": "https://pixabay.com/photos/bookkeeper-accountant-office-coffee-1016299/",
+        "query": "calculator and receipts on desk"
+      },
+      {
+        "slide": "s3",
+        "id": "pb:2442147",
+        "provider": "Pixabay",
+        "photographer": "MasterTux",
+        "url": "https://pixabay.com/photos/red-roses-cards-hearts-desire-3d-2442147/",
+        "query": "coupons on wooden table"
+      },
+      {
+        "slide": "s4",
+        "id": "pb:8289452",
+        "provider": "Pixabay",
+        "photographer": "lecreusois",
+        "url": "https://pixabay.com/photos/bike-wheels-retro-mechanics-8289452/",
+        "query": "two notebooks side by side desk"
+      },
+      {
+        "slide": "s5",
+        "id": "pb:1846233",
+        "provider": "Pixabay",
+        "photographer": "Pexels",
+        "url": "https://pixabay.com/photos/cliff-beach-holding-hands-arms-1846233/",
+        "query": "hand holding smartphone in cafe"
+      }
+    ],
+    "missing_photos": 0,
+    "overflow_slides": [],
+    "images": [
+      "out/2026-11-13/01.jpg",
+      "out/2026-11-13/02.jpg",
+      "out/2026-11-13/03.jpg",
+      "out/2026-11-13/04.jpg",
+      "out/2026-11-13/05.jpg",
+      "out/2026-11-13/06.jpg",
+      "out/2026-11-13/07.jpg"
+    ],
+    "publish_at": "2026-11-13T19:10:00+09:00",
+    "approved": false,
+    "status": "pending"
+  }
+}
