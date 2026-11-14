@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-15",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "news",
+      "publish_at": "2026-11-15T08:10:00+09:00",
+      "pillar": "배달앱 수수료 개편이 다른 앱으로 번질 수 있다는 기사 → 한 앱에 기대는 불안",
+      "text": "한 앱이 수수료 체계를 손보면 다른 앱도 따라갈 수 있다는 기사 봤어?\n\n이런 뉴스 나올 때마다 마음이 복잡해.\n좋아질 것 같다가도, 결국 우린 앱이 정한 판 안에서만 움직이는 것 같아서.\n\n주문이 한 군데에 몰려 있으면 그 앱 한마디에 가게가 흔들리잖아.\n\n너희 가게는 배달 주문, 앱 하나에 얼마나 기대고 있어?",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-11-15T12:20:00+09:00",
+      "pillar": "무료 플레이스 진단에서 실제로 뭘 전달하는지 소개",
+      "text": "플레이스 무료 진단, 받으면 뭘 알려주냐면.\n\n내가 사장님 가게 네이버 플레이스를 직접 열어서 봐.\n손님 눈으로 보고, 고칠 부분을 하나씩 정리해서 상세하게 전달해.\n\n\"뭘 고쳐야 할지 모르겠다\" 싶은 사장님한테 맞아.\n\n첫 상담이랑 진단은 무료야. 비용은 가게 규모에 맞춰 상담 후에 안내해.\n\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해줘.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-11-15T20:40:00+09:00",
+      "pillar": "비수기 매출 공백, 고정비는 그대로인데 사장 몫이 제일 먼저 줄어드는 마음",
+      "text": "비수기엔 매출보다 먼저 줄어드는 게 있어.\n사장 월급.\n\n월세, 인건비, 재료비는 그대로 나가거든.\n다 빼고 나면 내 몫은 늘 맨 마지막이야.\n\n그래도 오늘 문 열어놓은 거, 그게 보통 일이 아니야.\n\n비수기 버티는 너만의 방법 있어?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": {
+    "topic": "네이버 플레이스 키워드 설정 실수",
+    "episode": 10,
+    "kicker": "동네 가게 마케팅 수업 10교시",
+    "news_based": "",
+    "cover": {
+      "title": "키워드 많이 넣으면\n상위에 뜰까",
+      "photo_query": "cafe owner thinking at counter"
+    },
+    "sections": [
+      {
+        "heading": "키워드 칸을 비워두면 아깝다",
+        "body": "상호만 알고 찾아오는 손님은 대체로 단골이다. 처음 오는 손님은 가게 이름을 모른 채 '동네+메뉴'를 검색창에 친다.\n\n**키워드 칸은 이름을 모르는 손님을 위한 입구다.** 가게 설정 화면에서 비어 있거나 업종명 하나만 적힌 칸부터 확인해보자.",
+        "photo_query": "open door small shop morning"
+      },
+      {
+        "heading": "파는 것과 다른 키워드는 독이 된다",
+        "body": "인기 있어 보이는 단어를 끌어다 쓰고 싶은 마음은 이해한다. 하지만 디저트를 팔지 않는데 '디저트 맛집'이 걸려 있으면 들어온 손님은 금방 나간다.\n\n**키워드는 지금 매장에서 바로 주문할 수 있는 것만 남긴다.** 메뉴판을 옆에 두고 하나씩 대조해서 안 파는 단어는 지우자.",
+        "photo_query": "chef checking ingredients kitchen"
+      },
+      {
+        "heading": "손님의 검색어는 자동완성에 있다",
+        "body": "사장님이 쓰는 업계 용어와 손님의 검색어는 대체로 다르다. 우리는 '브런치 카페'라고 부르지만 손님은 '주차되는 브런치'를 칠 수도 있다.\n\n**휴대폰 검색창에 동네와 업종을 치고, 자동완성에 뜨는 단어를 적어보자.** 지어내지 않아도 손님이 쓰는 말이 거기 나온다.",
+        "photo_query": "hand holding smartphone in cafe"
+      },
+      {
+        "heading": "소개글과 소식에도 같은 단어를 쓴다",
+        "body": "키워드 칸만 채우고 나머지 글을 다른 말로 쓰면 가게 인상이 흩어진다. 경험상 소개글, 메뉴 설명, 소식에서 같은 단어가 반복될 때 손님도 가게를 한 줄로 기억한다.\n\n**억지로 나열하지 말고 한 문장에 한 번만 자연스럽게 넣는다.** 읽다가 어색하면 손님이 먼저 알아채기 때문이다.",
+        "photo_query": "notebook and pen on wooden table"
+      },
+      {
+        "heading": "오늘은 키워드 하나만 바꿔보자",
+        "body": "오늘 할 일은 하나다. 플레이스 업체 정보에서 현재 키워드를 열어 화면을 캡처해두자. 바꾸기 전 기록이 있어야 나중에 비교할 수 있다.\n\n**안 맞는 단어 하나를 지우고, 손님이 쓸 법한 단어 하나를 넣는다.** 한 번에 다 고치지 않아도 충분하다. 2주쯤 뒤 문의나 방문이 달라졌는지 살펴보자.",
+        "photo_query": "calendar and coffee on desk"
+      }
+    ],
+    "caption": "키워드는 많이 넣기보다\n손님 말투에 맞춰야 해요\n\n동네 가게 마케팅 수업 10교시 정리\n✔️ 키워드 칸을 비워두면 아깝다\n✔️ 파는 것과 다른 키워드는 독이 된다\n✔️ 손님의 검색어는 자동완성에 있다\n✔️ 소개글과 소식에도 같은 단어를 쓴다\n\n📝 오늘의 숙제\n오늘은 키워드 하나만 바꿔보자\n\n저장해두고 필요할 때 꺼내 보세요\n\n#자영업자 #소상공인 #사장님 #네이버플레이스 #플레이스키워드 #가게홍보 #매장마케팅",
+    "photos": [
+      {
+        "slide": "cover",
+        "id": "pb:4918513",
+        "provider": "Pixabay",
+        "photographer": "Deeezy",
+        "url": "https://pixabay.com/photos/coffee-cafe-cup-drink-caffeine-4918513/",
+        "query": "cafe owner thinking at counter"
+      },
+      {
+        "slide": "s1",
+        "id": "pb:1938978",
+        "provider": "Pixabay",
+        "photographer": "mbll",
+        "url": "https://pixabay.com/photos/butterfly-insect-winged-insect-1938978/",
+        "query": "open door small shop morning"
+      },
+      {
+        "slide": "s2",
+        "id": "pb:968657",
+        "provider": "Pixabay",
+        "photographer": "stevepb",
+        "url": "https://pixabay.com/photos/olive-oil-olives-food-oil-natural-968657/",
+        "query": "chef checking ingredients kitchen"
+      },
+      {
+        "slide": "s3",
+        "id": "pb:1869430",
+        "provider": "Pixabay",
+        "photographer": "Pexels",
+        "url": "https://pixabay.com/photos/camera-phone-girl-hands-1869430/",
+        "query": "hand holding smartphone in cafe"
+      },
+      {
+        "slide": "s4",
+        "id": "pb:1869306",
+        "provider": "Pixabay",
+        "photographer": "Pexels",
+        "url": "https://pixabay.com/photos/computer-desk-display-electronics-1869306/",
+        "query": "notebook and pen on wooden table"
+      },
+      {
+        "slide": "s5",
+        "id": "pb:4884740",
+        "provider": "Pixabay",
+        "photographer": "hudsoncrafted",
+        "url": "https://pixabay.com/photos/planner-march-calendar-schedule-4884740/",
+        "query": "calendar and coffee on desk"
+      }
+    ],
+    "missing_photos": 0,
+    "overflow_slides": [],
+    "images": [
+      "out/2026-11-15/01.jpg",
+      "out/2026-11-15/02.jpg",
+      "out/2026-11-15/03.jpg",
+      "out/2026-11-15/04.jpg",
+      "out/2026-11-15/05.jpg",
+      "out/2026-11-15/06.jpg",
+      "out/2026-11-15/07.jpg"
+    ],
+    "publish_at": "2026-11-15T19:10:00+09:00",
+    "approved": false,
+    "status": "pending"
+  }
+}
