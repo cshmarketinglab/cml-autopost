@@ -128,7 +128,8 @@
       "out/2026-11-11/07.jpg"
     ],
     "publish_at": "2026-11-11T19:10:00+09:00",
-    "approved": false,
-    "status": "pending"
+    "approved": true,
+    "status": "pending",
+    "approved_at": "2026-11-15T13:38:51.002646+09:00"
   }
 }
