@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-17",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "news",
+      "publish_at": "2026-11-17T08:10:00+09:00",
+      "pillar": "네이버 메뉴 교환권 판매 지원 소식을 사장 속마음으로",
+      "text": "네이버에서 우리 가게 메뉴 교환권을 팔 수 있게 된다는 기사 봤어?\n\n손님이 먼저 결제하고 나중에 먹으러 오는 방식이래.\n비수기엔 숨통 트이겠다 싶다가도\n'수수료는? 설정은 어렵나? 우리 가게도 되나?' 이런 생각부터 들지.\n\n자세한 조건은 원문으로 꼭 확인하고.\n\n너라면 어떤 메뉴를 교환권 1호로 내놓을 것 같아?",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-11-17T12:20:00+09:00",
+      "pillar": "리뷰는 쌓이는데 전화가 없다면 기본 정보부터 점검 (문제 지적형)",
+      "text": "리뷰는 쌓이는데 플레이스 보고 오는 손님은 그대로라면,\n문제는 리뷰가 아닐 수 있어.\n\n대표사진, 소개글, 메뉴 정보, 영업시간, 소식.\n손님이 제일 먼저 보는 곳이 비어 있거나 옛날 그대로인 가게가 의외로 많아.\n\n식당·카페·펍·숙소 여러 업장을 현장에서 직접 맡아본 입장에서 네 가게 플레이스를 보고 고칠 곳을 하나씩 짚어줄게.\n\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해줘.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-11-17T20:40:00+09:00",
+      "pillar": "광고비 올릴지 말지 고민하는 순간",
+      "text": "광고 신청 버튼 앞에서 엄지가 멈춘 적 있지?\n\n안 하면 우리만 밀리는 것 같고\n하자니 이번 달 남는 게 더 줄 것 같고.\n\n옆 가게는 하는 것 같은데 효과는 물어보기도 애매하고.\n결국 창 닫고 영업 준비하러 가는 거야.\n\n그 버튼 앞에서 제일 오래 고민했던 게 뭐였어?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": {
+    "topic": "네이버 플레이스 메뉴 교환권·상품권, 사장님이 지금 확인하고 준비할 것",
+    "episode": 11,
+    "kicker": "동네 가게 마케팅 수업 11교시 · 이슈 특강",
+    "news_based": "네이버, 음식점 메뉴 교환권 판매 지원…19일부터 서비스 시작",
+    "cover": {
+      "title": "교환권 팔면\n손님이 올까",
+      "photo_query": "cafe owner smiling at counter"
+    },
+    "sections": [
+      {
+        "heading": "교환권 판매, 조건부터 확인한다",
+        "body": "네이버가 19일부터 음식점 메뉴 교환권 판매 지원을 시작하고, Npay 플레이스 상품권 도입 소식도 함께 나왔다.\n\n**신청 조건과 정산 방식은 기사 제목만으로 알 수 없으니 공식 공고에서 먼저 확인한다.** 소문이 아니라 원문이 기준이고, 확인한 뒤 움직여도 늦지 않다.",
+        "photo_query": "hand holding smartphone in cafe"
+      },
+      {
+        "heading": "교환권으로 팔 메뉴는 하나만 고른다",
+        "body": "처음부터 메뉴판 전체를 올리려 하면 계산이 흐려진다. 가장 자주 나가는 메뉴 하나, 혹은 한 세트만 후보로 둔다.\n\n**교환권은 먼저 돈을 받고 나중에 음식을 내는 구조이므로, 그 메뉴를 내도 남는지 원가부터 적어 본다.** 가격은 공식 안내를 본 뒤 정해도 늦지 않다.",
+        "photo_query": "pasta dish wooden table"
+      },
+      {
+        "heading": "플레이스 기본 정보부터 손본다",
+        "body": "교환권을 살지 고민하는 손님은 대체로 가게 정보를 한 번 훑어본다. 영업시간, 휴무일, 메뉴 사진이 오래된 그대로면 거기서 마음이 식을 수 있다.\n\n**교환권을 열기 전에 영업시간·휴무일·대표 메뉴 사진 세 가지를 오늘 기준으로 맞춰 둔다.** 휴무일 표기가 맞는지만 봐도 절반은 끝난다.",
+        "photo_query": "person checking phone on street"
+      },
+      {
+        "heading": "교환권 쓰는 날의 동선을 정해 둔다",
+        "body": "손님이 교환권을 내밀었을 때 누가 어떻게 확인하는지 정해지지 않으면 홀이 잠깐 멈춘다. 바쁜 점심에 이런 멈춤이 생기면 줄이 길어진다.\n\n**사용 확인 방식은 공식 안내를 본 뒤, 직원 누구나 같은 순서로 처리하도록 메모 한 장으로 공유한다.** 사장님 혼자만 아는 절차는 절차가 아니다.",
+        "photo_query": "waiter serving customer at table"
+      },
+      {
+        "heading": "오늘의 숙제: 메뉴 하나에 원가 적기",
+        "body": "공고를 확인하기 전에 오늘 할 수 있는 일은 하나다. 메뉴판을 펴고 교환권으로 내보낼 만한 메뉴 하나에 동그라미를 친다.\n\n**그 옆에 재료 원가와 판매가를 적어 두는 것이 오늘의 숙제이다.** 숫자가 있어야 조건을 봤을 때 바로 할지 말지 판단할 수 있다.",
+        "photo_query": "pen notebook calculator desk"
+      }
+    ],
+    "caption": "교환권은 팔기 전에\n계산부터 해 둬야 해요\n\n동네 가게 마케팅 수업 11교시 · 이슈 특강 정리\n✔️ 교환권 판매, 조건부터 확인한다\n✔️ 교환권으로 팔 메뉴는 하나만 고른다\n✔️ 플레이스 기본 정보부터 손본다\n✔️ 교환권 쓰는 날의 동선을 정해 둔다\n\n📝 오늘의 숙제\n오늘의 숙제: 메뉴 하나에 원가 적기\n\n📰 참고: 워크투데이 보도 · 세부 조건은 공식 공고를 꼭 확인하세요\n\n📤 주변 사장님한테도 공유해 주세요\n이런 소식은 아는 사람만 챙겨요\n\n🔔 다음 소식도 놓치지 않게 @cml.place 팔로우\n\n#자영업자 #소상공인 #사장님 #네이버플레이스 #메뉴교환권 #Npay #식당마케팅 #가게운영",
+    "photos": [
+      {
+        "slide": "cover",
+        "id": "pb:2072907",
+        "provider": "Pixabay",
+        "photographer": "3652586",
+        "url": "https://pixabay.com/photos/smile-happy-people-fun-young-2072907/",
+        "query": "cafe owner smiling at counter"
+      },
+      {
+        "slide": "s1",
+        "id": "pb:410311",
+        "provider": "Pixabay",
+        "photographer": "JESHOOTS-com",
+        "url": "https://pixabay.com/photos/iphone-hand-screen-smartphone-apps-410311/",
+        "query": "hand holding smartphone in cafe"
+      },
+      {
+        "slide": "s2",
+        "id": "pb:4356793",
+        "provider": "Pixabay",
+        "photographer": "Engin_Akyurt",
+        "url": "https://pixabay.com/photos/pasta-flour-kitchen-food-egg-4356793/",
+        "query": "pasta dish wooden table"
+      },
+      {
+        "slide": "s3",
+        "id": "pb:203492",
+        "provider": "Pixabay",
+        "photographer": "Ichigo121212",
+        "url": "https://pixabay.com/photos/phone-booth-telephone-public-phone-203492/",
+        "query": "person checking phone on street"
+      },
+      {
+        "slide": "s4",
+        "id": "pb:2598319",
+        "provider": "Pixabay",
+        "photographer": "StockSnap",
+        "url": "https://pixabay.com/photos/inside-restaurant-bar-table-dining-2598319/",
+        "query": "waiter serving customer at table"
+      },
+      {
+        "slide": "s5",
+        "id": "pb:723925",
+        "provider": "Pixabay",
+        "photographer": "Edar",
+        "url": "https://pixabay.com/photos/calculator-calculation-assurance-723925/",
+        "query": "pen notebook calculator desk"
+      }
+    ],
+    "missing_photos": 0,
+    "overflow_slides": [],
+    "images": [
+      "out/2026-11-17/01.jpg",
+      "out/2026-11-17/02.jpg",
+      "out/2026-11-17/03.jpg",
+      "out/2026-11-17/04.jpg",
+      "out/2026-11-17/05.jpg",
+      "out/2026-11-17/06.jpg",
+      "out/2026-11-17/07.jpg"
+    ],
+    "publish_at": "2026-11-17T19:10:00+09:00",
+    "approved": false,
+    "status": "pending"
+  }
+}
