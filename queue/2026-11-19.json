@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-19",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "news",
+      "publish_at": "2026-11-19T08:10:00+09:00",
+      "pillar": "배달 문제로 가게에 붙는 별점 테러 개선 요구 기사 → 억울한 속마음",
+      "text": "배달 때문에 받은 별점이 가게에 그대로 붙는 거, 바꿔달라는 요구가 움직였다는 기사 봤어?\n\n음식은 멀쩡했는데\n배달이 늦었다고 별 하나 달리면\n알림 보는 순간 속이 내려앉잖아.\n\n내가 만든 게 아닌 걸로 평가받는 기분.\n어디다 말도 못 하고 혼자 삼키는 사장님 많더라.\n\n너는 이런 별점 받아본 적 있어?",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-11-19T12:20:00+09:00",
+      "pillar": "문제 지적형: 가게 안은 매일 보지만 손님이 처음 보는 플레이스 화면은 안 본다 → 무료 진단 유도",
+      "text": "사장님 가게 플레이스, 손님 눈으로 마지막에 본 게 언제야?\n\n가게 안은 매일 쓸고 닦으면서\n정작 손님이 제일 먼저 만나는 화면은 안 보는 사장님 많더라.\n\n나는 식당, 카페, 펍, 숙소, 미용실 같은 여러 업장 마케팅을 현장에서 직접 맡아왔어.\n플레이스를 보고 어디를 고치면 좋을지 상세하게 짚어주는 진단, 무료야.\n\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해줘.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-11-19T20:40:00+09:00",
+      "pillar": "오픈 전 새벽 준비 시간, 아무도 모르는 사장의 하루 시작",
+      "text": "오픈 한 시간 전, 가게엔 아직 나밖에 없어.\n\n불 켜고, 재료 꺼내고, 바닥 한 번 훑고.\n첫 손님이 문 열기도 전에\n하루치 체력은 벌써 반쯤 쓴 느낌.\n\n이 시간은 손님도 모르고 매출표에도 안 찍혀.\n그래도 이 시간이 있어서 가게 문이 열리는 거야.\n\n너는 오픈 전 이 시간에 제일 먼저 뭐부터 해?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": {
+    "topic": "비수기에 해야 할 마케팅 준비",
+    "episode": 12,
+    "kicker": "동네 가게 마케팅 수업 12교시",
+    "news_based": "",
+    "cover": {
+      "title": "한가한 달엔\n쉬는 게 답일까",
+      "photo_query": "cafe owner sitting by window"
+    },
+    "sections": [
+      {
+        "heading": "한가한 오후가 촬영 적기다",
+        "body": "손님이 몰리는 철엔 사진을 찍을 틈이 없다. 접시를 닦고 조명을 맞추는 일은 늘 뒤로 밀린다.\n\n**한가한 오후 30분이면 대표 메뉴 한 접시와 매장 입구를 찍기에 충분하다.** 창가 자연광이 드는 시간대를 골라 같은 자리에서 찍어두면 나중에 쓸 사진이 차곡차곡 쌓인다.",
+        "photo_query": "sunlight on cafe table coffee"
+      },
+      {
+        "heading": "잘 나간 메뉴 세 개부터 적는다",
+        "body": "성수기엔 뭐가 잘 팔렸는지 기억에 의존하게 된다. 기억은 대체로 마지막 한 주에 쏠린다.\n\n**포스나 장부를 열어 많이 나간 메뉴 세 개와 손님이 몰린 요일을 종이에 적어두자.** 다음 시즌에 어떤 메뉴를 사진 맨 앞에 둘지 정하는 근거가 되고, 감으로 정할 때보다 덜 흔들린다.",
+        "photo_query": "owner writing notes in notebook"
+      },
+      {
+        "heading": "플레이스 정보는 한 줄씩 대조한다",
+        "body": "비수기엔 영업시간이 슬쩍 바뀌고 휴무일도 달라지곤 한다. 경험상 플레이스 정보가 예전 그대로인 가게가 꽤 있다.\n\n**영업시간, 휴무일, 메뉴 가격을 매장 현실과 한 줄씩 대조해보자.** 헛걸음한 손님의 기억은 대체로 별점보다 먼저, 그리고 오래 남는다.",
+        "photo_query": "hand holding smartphone in cafe"
+      },
+      {
+        "heading": "다음 시즌 소식은 단골이 먼저",
+        "body": "단골은 광고보다 가게 소식을 듣고 다시 오는 경우가 많다. 한가한 철은 그들에게 말을 걸기 좋은 때다.\n\n**다음 시즌 신메뉴 시식이나 예약 오픈 소식을 단골에게 먼저 알리자.** 카운터 쪽지, 인스타 스토리, 플레이스 소식 중 딱 하나만 고르면 꾸준히 이어가기 쉽다.",
+        "photo_query": "barista chatting with regular customer"
+      },
+      {
+        "heading": "오늘 캘린더에 알림 하나 등록",
+        "body": "비수기 준비는 거창한 계획서가 아니라 날짜 하나에서 시작된다. 지금 휴대폰 캘린더를 열어보자.\n\n**다음 성수기 시작일 4주 전에 '사진·기록·정보·소식 점검'이라는 알림을 오늘 등록하자.** 그날이 오면 앞서 본 네 가지를 순서대로 꺼내 보면 된다.",
+        "photo_query": "calendar planner pen on desk"
+      }
+    ],
+    "caption": "한가한 달은 쉬는 달이 아니라\n다음 철 준비하는 달이에요\n\n동네 가게 마케팅 수업 12교시 정리\n✔️ 한가한 오후가 촬영 적기다\n✔️ 잘 나간 메뉴 세 개부터 적는다\n✔️ 플레이스 정보는 한 줄씩 대조한다\n✔️ 다음 시즌 소식은 단골이 먼저\n\n📝 오늘의 숙제\n오늘 캘린더에 알림 하나 등록\n\n저장해두고 필요할 때 꺼내 보세요\n\n#자영업자 #소상공인 #사장님 #비수기마케팅 #네이버플레이스 #카페사장 #식당마케팅 #매장운영",
+    "photos": [
+      {
+        "slide": "cover",
+        "id": "pb:2291039",
+        "provider": "Pixabay",
+        "photographer": "Peggy_Marco",
+        "url": "https://pixabay.com/photos/kitten-cat-chair-marketplace-climb-2291039/",
+        "query": "cafe owner sitting by window"
+      },
+      {
+        "slide": "s1",
+        "id": "pb:6171744",
+        "provider": "Pixabay",
+        "photographer": "Daria-Yakovleva",
+        "url": "https://pixabay.com/photos/coffee-cup-mug-drink-cappuccino-6171744/",
+        "query": "sunlight on cafe table coffee"
+      },
+      {
+        "slide": "s2",
+        "id": "pb:593333",
+        "provider": "Pixabay",
+        "photographer": "StartupStockPhotos",
+        "url": "https://pixabay.com/photos/man-write-plan-desk-notes-pen-593333/",
+        "query": "owner writing notes in notebook"
+      },
+      {
+        "slide": "s3",
+        "id": "pb:586268",
+        "provider": "Pixabay",
+        "photographer": "niekverlaan",
+        "url": "https://pixabay.com/photos/telephone-mobile-call-samsung-586268/",
+        "query": "hand holding smartphone in cafe"
+      },
+      {
+        "slide": "s4",
+        "id": "pb:2572522",
+        "provider": "Pixabay",
+        "photographer": "StockSnap",
+        "url": "https://pixabay.com/photos/coffee-shop-cafe-restaurant-people-2572522/",
+        "query": "barista chatting with regular customer"
+      },
+      {
+        "slide": "s5",
+        "id": "pb:10045176",
+        "provider": "Pixabay",
+        "photographer": "Ralf1403",
+        "url": "https://pixabay.com/photos/calendar-meeting-planning-10045176/",
+        "query": "calendar planner pen on desk"
+      }
+    ],
+    "missing_photos": 0,
+    "overflow_slides": [],
+    "images": [
+      "out/2026-11-19/01.jpg",
+      "out/2026-11-19/02.jpg",
+      "out/2026-11-19/03.jpg",
+      "out/2026-11-19/04.jpg",
+      "out/2026-11-19/05.jpg",
+      "out/2026-11-19/06.jpg",
+      "out/2026-11-19/07.jpg"
+    ],
+    "publish_at": "2026-11-19T19:10:00+09:00",
+    "approved": false,
+    "status": "pending"
+  }
+}
