@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-21",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "news",
+      "publish_at": "2026-11-21T08:10:00+09:00",
+      "pillar": "체험단 마케팅 글이 네이버 AI 브리핑에 인용될지에 대한 사장님 속마음",
+      "text": "체험단 글 열심히 돌렸는데, 그게 AI 검색에도 잡힐까?\n\n협찬 표시 있는 글도 네이버 AI 브리핑에 인용될지 짚은 기사 봤어.\n결론은 나도 원문을 더 봐야 알 것 같아.\n\n근데 사장 입장에선 이게 제일 궁금하지.\n돈 들여 만든 글이 검색에서 어디까지 일해주는지.\n\n요즘 손님은 우리 가게를 어떻게 찾아오는 것 같아?",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-11-21T12:20:00+09:00",
+      "pillar": "새싹·줄기·열매 정기 관리 3단계 소개형 + 무료 진단 유도",
+      "text": "플레이스 관리, 혼자 하려면 손이 모자라지?\n\n소식 올리고, 리뷰 답글 달고, 통계 볼 시간은 없고.\n그래서 관리를 세 단계로 나눠놨어.\n\n새싹: 월 4회 소식 작성, 리뷰 답글 가이드, 월간 통계, 컨설팅\n줄기: 플레이스 대리운영, A/B테스트, 시즌 제안\n열매: 플레이스 광고 운영, 단골 재방문 설계\n\n비용은 가게 규모에 맞춰 상담 후 안내해.\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청부터 해봐.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-11-21T20:40:00+09:00",
+      "pillar": "리뷰 하나에 하루 기분이 좌우되는 마음",
+      "text": "손님 나간 뒤 폰을 열었더니 별 하나짜리 리뷰가 달려 있어.\n\n오늘 잘한 건 그대로 있는데,\n그 한 줄만 계속 머릿속에서 맴돌아.\n\n좋은 후기 열 개보다 나쁜 하나가 오래 남는 거, 사장이면 다 알잖아.\n\n너는 리뷰 하나에 하루가 흔들린 날, 어떻게 넘겼어?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": {
+    "topic": "손님이 저장하고 싶은 게시물 만드는 법",
+    "episode": 14,
+    "kicker": "동네 가게 마케팅 수업 14교시",
+    "news_based": "",
+    "cover": {
+      "title": "예쁜 사진이면\n저장할까",
+      "photo_query": "woman looking at smartphone cafe window"
+    },
+    "sections": [
+      {
+        "heading": "저장은 예쁨보다 쓸모에 눌린다",
+        "body": "경험상 저장 폴더를 열어보면 예쁜 사진보다 나중에 쓸 정보가 더 많다. 가고 싶은 식당 목록, 갈 만한 곳 지도가 그렇다.\n\n**손님은 감탄할 때보다 나중에 써먹겠다고 생각할 때 저장을 누른다.** 게시물을 올리기 전에 '이걸 다시 열어볼 이유가 있나'부터 스스로 물어본다.",
+        "photo_query": "hand holding smartphone in cafe"
+      },
+      {
+        "heading": "첫 장 제목은 상황으로 쓴다",
+        "body": "'신메뉴 출시' 대신 '부모님 모시고 가기 편한 집'처럼 쓴다. 손님은 가게 소식이 아니라 자기 상황에서 찾고 저장한다.\n\n**첫 장에는 메뉴 이름보다 언제 누구와 오면 좋은지를 적는다.** 비 오는 날 혼자 한잔, 아이와 함께하는 점심처럼 장면이 떠오르면 충분하다.",
+        "photo_query": "couple dining restaurant table"
+      },
+      {
+        "heading": "가격·위치·시간을 한 장에 모은다",
+        "body": "저장한 게시물을 다시 여는 때는 대개 가려고 마음먹었을 때다. 그때 영업시간이나 휴무일을 찾아 헤매면 손님은 금방 창을 닫는다.\n\n**정보 한 장에 대표 메뉴 가격, 영업시간, 휴무일, 주차 여부를 함께 적어둔다.** 글씨는 크게, 한 장에 네 줄 안쪽이면 읽기 편하다.",
+        "photo_query": "wall clock in cafe"
+      },
+      {
+        "heading": "주문 팁 한 줄이 저장을 부른다",
+        "body": "처음 온 손님이 가장 망설이는 건 무엇을 시킬지다. 사장님에게는 당연한 조합도 손님에게는 쓸 만한 정보가 된다.\n\n**마지막 장에 '둘이 오면 이 조합' 같은 주문 팁을 한 줄 넣는다.** 맵기 조절, 한가한 시간대, 빨리 나오는 메뉴처럼 가게를 아는 사람만 아는 이야기면 된다.",
+        "photo_query": "waiter taking order at table"
+      },
+      {
+        "heading": "오늘 숙제는 첫 장 문구 하나",
+        "body": "가장 최근에 올린 게시물 하나를 연다. 첫 장 문구가 '신메뉴'나 '오늘의 한 컷'이라면 바로 고칠 자리다.\n\n**캡션 첫 줄을 '누구와, 언제 오면 좋은 집'이라는 한 줄로 바꿔 적는다.** 새로 만들 필요 없이 문구 하나만 손봐도 오늘 숙제는 끝이다.",
+        "photo_query": "notebook and pen on cafe table"
+      }
+    ],
+    "caption": "예쁜 사진보다\n나중에 쓸 정보에 저장해요\n\n동네 가게 마케팅 수업 14교시 정리\n✔️ 저장은 예쁨보다 쓸모에 눌린다\n✔️ 첫 장 제목은 상황으로 쓴다\n✔️ 가격·위치·시간을 한 장에 모은다\n✔️ 주문 팁 한 줄이 저장을 부른다\n\n📝 오늘의 숙제\n오늘 숙제는 첫 장 문구 하나\n\n저장해두고 필요할 때 꺼내 보세요\n\n#자영업자 #소상공인 #사장님 #인스타마케팅 #카페마케팅 #식당마케팅 #게시물기획 #가게홍보",
+    "photos": [
+      {
+        "slide": "cover",
+        "id": "pb:8655931",
+        "provider": "Pixabay",
+        "photographer": "Chuotanhls",
+        "url": "https://pixabay.com/photos/girl-face-indoors-smile-model-8655931/",
+        "query": "woman looking at smartphone cafe window"
+      },
+      {
+        "slide": "s1",
+        "id": "pb:1536226",
+        "provider": "Pixabay",
+        "photographer": "scronfinixio",
+        "url": "https://pixabay.com/photos/happy-valentines-day-love-coffe-cup-1536226/",
+        "query": "hand holding smartphone in cafe"
+      },
+      {
+        "slide": "s2",
+        "id": "pb:2699486",
+        "provider": "Pixabay",
+        "photographer": "Pamjpat",
+        "url": "https://pixabay.com/photos/dinner-burger-salt-and-pepper-meal-2699486/",
+        "query": "couple dining restaurant table"
+      },
+      {
+        "slide": "s3",
+        "id": "pb:4343663",
+        "provider": "Pixabay",
+        "photographer": "pixel2013",
+        "url": "https://pixabay.com/photos/neon-sign-coffee-lovers-coffee-4343663/",
+        "query": "wall clock in cafe"
+      },
+      {
+        "slide": "s4",
+        "id": "pb:7520627",
+        "provider": "Pixabay",
+        "photographer": "IqbalStock",
+        "url": "https://pixabay.com/photos/muslim-woman-writing-notebook-7520627/",
+        "query": "waiter taking order at table"
+      },
+      {
+        "slide": "s5",
+        "id": "pb:865091",
+        "provider": "Pixabay",
+        "photographer": "picjumbo_com",
+        "url": "https://pixabay.com/photos/office-desk-smartphone-modern-865091/",
+        "query": "notebook and pen on cafe table"
+      }
+    ],
+    "missing_photos": 0,
+    "overflow_slides": [],
+    "images": [
+      "out/2026-11-21/01.jpg",
+      "out/2026-11-21/02.jpg",
+      "out/2026-11-21/03.jpg",
+      "out/2026-11-21/04.jpg",
+      "out/2026-11-21/05.jpg",
+      "out/2026-11-21/06.jpg",
+      "out/2026-11-21/07.jpg"
+    ],
+    "publish_at": "2026-11-21T19:10:00+09:00",
+    "approved": false,
+    "status": "pending"
+  }
+}
