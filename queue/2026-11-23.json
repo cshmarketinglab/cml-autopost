@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-23",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "news",
+      "publish_at": "2026-11-23T08:10:00+09:00",
+      "pillar": "소상공인 바우처 사용 기한이 곧 끝난다는 기사, 확인할 시간 없는 사장 속마음",
+      "text": "소상공인 바우처, 사용 기한이 곧 끝난다는 기사 봤어?\n\n아직 안 쓴 사장님 꽤 많더라.\n쓸 데가 없어서가 아니라 확인할 시간이 없어서.\n\n오픈 준비하고 마감하다 보면\n공지는 늘 뒷전이 되잖아.\n\n대상이랑 사용처는 원문에서 꼭 다시 확인하고.\n\n너는 벌써 썼어, 아직 남아 있어?",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-11-23T12:20:00+09:00",
+      "pillar": "문제 지적형: 멈춰 있는 소식 탭과 밀린 리뷰 답글 → 새싹 관리 소개",
+      "text": "소식 탭이 몇 달째 멈춰 있으면, 손님은 영업 중인지도 헷갈려.\n\n바빠서 못 올리는 거 알아. 리뷰 답글도 자꾸 밀리고.\n\n내가 해주는 건 이래.\n· 소식 월 4회 작성\n· 리뷰 답글 가이드\n· 월간 통계 공유\n· 컨설팅\n\n뭘 했는지 숨기지 않고 보여주는 관리야.\n\n먼저 프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해줘.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-11-23T20:40:00+09:00",
+      "pillar": "알바 갑작스러운 펑크 문자와 사장이 빈자리를 메우는 아침",
+      "text": "펑크 문자는 꼭 제일 바쁠 것 같은 날 아침에 와.\n\n\"사장님, 오늘 못 나갈 것 같아요.\"\n\n답장은 \"괜찮아, 푹 쉬어\" 하고 보내.\n근데 속은 벌써 계산 중이야.\n내가 홀 볼까, 주방 볼까, 누구한테 전화하지.\n\n아픈 사람한테 서운한 건 아닌데\n빈자리는 결국 사장이 메우게 되더라.\n\n이런 아침, 다들 어떻게 넘겨?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": {
+    "topic": "소상공인 바우처 25만원 12월 31일 마감 전 확인하고 쓸 것들",
+    "episode": 15,
+    "kicker": "동네 가게 마케팅 수업 15교시 · 이슈 특강",
+    "news_based": "소상공인 바우처 25만원 12월 31일 사용 마감",
+    "cover": {
+      "title": "바우처 25만원,\n연말에 쓰면 될까",
+      "photo_query": "cafe owner checking smartphone counter"
+    },
+    "sections": [
+      {
+        "heading": "12월 31일이 사용 마감이다",
+        "body": "소상공인 바우처 25만원의 사용 기한이 12월 31일로 마감된다는 소식이다. 마감이 있는 혜택은 대체로 마지막에 몰려서 쓰게 된다.\n\n그래서 첫 할 일은 쓰기가 아니라 확인이다. **내가 대상인지, 잔액이 얼마인지는 공식 공고와 신청 화면에서 먼저 본다.** 기사만 보고 짐작하지 않는 것이 순서다.",
+        "photo_query": "wall calendar december desk"
+      },
+      {
+        "heading": "사용처 조건부터 메모해둔다",
+        "body": "바우처는 어디에 쓸 수 있는지가 핵심이다. 사용처와 제외 항목은 원문 확인이 필요하니 공식 공고 문구를 그대로 옮겨 적어둔다.\n\n**쓸 수 있는 항목과 못 쓰는 항목을 두 줄로 나눠 메모장에 적는다.** 결제 직전에 이게 되나 하고 검색하는 시간이 사라진다.",
+        "photo_query": "writing notes notebook pen hand"
+      },
+      {
+        "heading": "어차피 살 것부터 후보로 뽑는다",
+        "body": "새로 살 것을 찾기 전에 지난달 지출 내역을 열어본다. 가게에서 어차피 정기적으로 사는 것들이 먼저 후보가 된다.\n\n**후보 목록은 '어차피 살 것'을 먼저, '있으면 좋은 것'은 나중에 적는다.** 마감에 쫓겨 필요 없는 물건을 사면 혜택이 아니라 지출이 된다.",
+        "photo_query": "restaurant kitchen supplies shelf"
+      },
+      {
+        "heading": "결제 기록은 따로 모아둔다",
+        "body": "바우처로 결제한 내역은 나중에 다시 볼 일이 생길 수 있다. 영수증과 결제 문자는 캡처해서 모아두고, 증빙 방식은 공식 공고에서 확인한다.\n\n**폴더 이름은 '바우처 12월'처럼 한눈에 보이게 짓는다.** 연말에 바쁠 때 기록을 찾아 헤매지 않게 된다.",
+        "photo_query": "receipts stack on table"
+      },
+      {
+        "heading": "오늘의 숙제: 공식 공고 열기",
+        "body": "오늘 할 일은 하나다. 소상공인 바우처 공식 공고를 열어 대상, 사용처, 잔액을 확인한다.\n\n**확인한 내용을 메모장에 세 줄로 적고, 12월 31일을 휴대폰 알람에 등록한다.** 무엇을 쓸지는 그다음에 정해도 늦지 않다.",
+        "photo_query": "hand holding smartphone in cafe"
+      }
+    ],
+    "caption": "마감 전에 쓰려면\n확인부터 해두세요\n\n동네 가게 마케팅 수업 15교시 · 이슈 특강 정리\n✔️ 12월 31일이 사용 마감이다\n✔️ 사용처 조건부터 메모해둔다\n✔️ 어차피 살 것부터 후보로 뽑는다\n✔️ 결제 기록은 따로 모아둔다\n\n📝 오늘의 숙제\n오늘의 숙제: 공식 공고 열기\n\n📰 참고: 비건뉴스 보도 · 세부 조건은 공식 공고를 꼭 확인하세요\n\n📤 주변 사장님한테도 공유해 주세요\n이런 소식은 아는 사람만 챙겨요\n\n🔔 다음 소식도 놓치지 않게 @cml.place 팔로우\n\n#자영업자 #소상공인 #사장님 #소상공인바우처 #소상공인지원 #연말준비 #가게운영",
+    "photos": [
+      {
+        "slide": "cover",
+        "id": "pb:8702640",
+        "provider": "Pixabay",
+        "photographer": "Surprising_Media",
+        "url": "https://pixabay.com/photos/man-dog-pet-animal-canine-fur-8702640/",
+        "query": "cafe owner checking smartphone counter"
+      },
+      {
+        "slide": "s1",
+        "id": "pb:4675500",
+        "provider": "Pixabay",
+        "photographer": "Alexas_Fotos",
+        "url": "https://pixabay.com/photos/sylvester-new-years-day-4675500/",
+        "query": "wall calendar december desk"
+      },
+      {
+        "slide": "s2",
+        "id": "pb:923882",
+        "provider": "Pixabay",
+        "photographer": "StockSnap",
+        "url": "https://pixabay.com/photos/writing-writer-notes-pen-notebook-923882/",
+        "query": "writing notes notebook pen hand"
+      },
+      {
+        "slide": "s3",
+        "id": "pb:3623317",
+        "provider": "Pixabay",
+        "photographer": "652234",
+        "url": "https://pixabay.com/photos/bottles-alcohol-drinks-bar-liquor-3623317/",
+        "query": "restaurant kitchen supplies shelf"
+      },
+      {
+        "slide": "s4",
+        "id": "pb:192989",
+        "provider": "Pixabay",
+        "photographer": "FrankyFromGermany",
+        "url": "https://pixabay.com/photos/sea-cliff-travel-destination-192989/",
+        "query": "receipts stack on table"
+      },
+      {
+        "slide": "s5",
+        "id": "pb:1419275",
+        "provider": "Pixabay",
+        "photographer": "geralt",
+        "url": "https://pixabay.com/photos/mobile-phone-smartphone-hand-1419275/",
+        "query": "hand holding smartphone in cafe"
+      }
+    ],
+    "missing_photos": 0,
+    "overflow_slides": [],
+    "images": [
+      "out/2026-11-23/01.jpg",
+      "out/2026-11-23/02.jpg",
+      "out/2026-11-23/03.jpg",
+      "out/2026-11-23/04.jpg",
+      "out/2026-11-23/05.jpg",
+      "out/2026-11-23/06.jpg",
+      "out/2026-11-23/07.jpg"
+    ],
+    "publish_at": "2026-11-23T19:10:00+09:00",
+    "approved": false,
+    "status": "pending"
+  }
+}
