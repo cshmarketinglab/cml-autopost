@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-25",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "news",
+      "publish_at": "2026-11-25T08:10:00+09:00",
+      "pillar": "배달앱 수수료 상한제 재논의 기사 → 내 가게 순마진 계산",
+      "text": "수수료 상한제 얘기가 다시 나온다는 기사 봤어?\n\n이런 소식 뜨면 일단 계산기부터 두드리게 되지.\n\n근데 의견이 엇갈리는 동안에도\n기사엔 안 나오는 게 하나 있어.\n재료비, 포장비, 수수료, 광고비 빼고\n내 손에 진짜 남는 돈.\n\n다들 그거, 정확히 알고 있어?",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-11-25T12:20:00+09:00",
+      "pillar": "오해 깨기형: 무료 진단 받으면 영업만 당한다는 걱정",
+      "text": "무료 진단 받으면 영업부터 들어올 것 같지?\n\n그 마음 알아. 그래서 숨기지 않는 마케팅을 해.\n\n네이버 플레이스를 직접 보고\n뭐가 비어 있고 뭘 고치면 좋을지 상세하게 전달해줄게.\n\n첫 상담이랑 진단은 무료야.\n비용은 가게 규모 보고, 상담한 뒤에 안내해.\n\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해줘.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-11-25T20:40:00+09:00",
+      "pillar": "가족·지인의 \"장사 잘 돼?\" 질문",
+      "text": "가족 모임에서 제일 대답하기 어려운 질문, \"장사 잘 돼?\"\n\n잘된다고 하기엔 통장이 알고\n안 된다고 하기엔 걱정시킬 것 같고\n결국 \"그럭저럭~\" 하고 웃고 넘겨.\n\n걱정해서 묻는 거 아는데\n그 한마디에 속으로 계산기가 한 번 돌아가.\n\n너는 그 질문에 뭐라고 대답해?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": {
+    "topic": "체험단 운영 시 사장님이 주의할 점",
+    "episode": 16,
+    "kicker": "동네 가게 마케팅 수업 16교시",
+    "news_based": "",
+    "cover": {
+      "title": "체험단 보내면\n손님이 올까",
+      "photo_query": "cafe owner looking at smartphone"
+    },
+    "sections": [
+      {
+        "heading": "체험단 전에 목표부터 한 줄 적는다",
+        "body": "체험단을 열면 후기가 쌓이니 좋겠다 싶어 일단 모집부터 하는 경우가 많다. 그런데 목표가 없으면 끝난 뒤 남는 게 후기 몇 개뿐일 때가 있다.\n\n**신규 손님 늘리기인지, 평일 낮 빈 시간 채우기인지 한 줄로 적어두자.** 목표가 정해져야 메뉴도, 방문 요일도 그에 맞게 고를 수 있다.",
+        "photo_query": "notebook pen on wooden table"
+      },
+      {
+        "heading": "제공 메뉴는 평소 손님이 먹는 구성으로",
+        "body": "체험단에게 가장 비싼 세트나 특별 구성을 내주고 싶은 마음이 든다. 하지만 후기를 본 손님이 가게에 와서 같은 걸 주문할 수 없다면 기대와 현실이 어긋난다.\n\n**후기 사진 속 음식은 다음 손님이 실제로 시킬 수 있는 메뉴여야 한다.** 가격대와 양이 평소와 같은지 주문 전에 한 번 확인해보자.",
+        "photo_query": "chef plating dish closeup"
+      },
+      {
+        "heading": "가이드라인은 필수 항목 두세 개만",
+        "body": "글자 수, 사진 장수, 해시태그, 칭찬 문구까지 줄줄이 적은 가이드는 읽는 사람도 부담스럽고 후기도 비슷비슷해진다. 경험상 그런 후기는 읽는 손님에게도 금방 티가 난다.\n\n**꼭 넣을 것은 가게 이름, 협찬 표기, 대표 메뉴 사진 정도로 줄이자.** 맛에 대한 평가는 체험한 분의 말로 남기게 두는 쪽이 낫다.",
+        "photo_query": "hand writing checklist paper"
+      },
+      {
+        "heading": "방문 시간은 한가한 때로 나눠 잡는다",
+        "body": "체험단이 점심 피크에 몰리면 일반 손님 응대가 밀리고, 체험단도 정신없는 홀만 기억하고 돌아가기 쉽다. 사장님도 손님도 아쉬운 결과다.\n\n**체험단 방문은 평소 한가한 요일과 시간대로 나눠 받자.** 하루에 몰리지 않게 일정을 흩어두면 응대도 여유롭고, 비어 있던 시간도 채울 수 있다.",
+        "photo_query": "empty restaurant tables afternoon"
+      },
+      {
+        "heading": "오늘은 목표 한 줄만 메모장에 적자",
+        "body": "체험단을 이미 운영 중이든 아직 고민 중이든 오늘 할 일은 하나다. 휴대폰 메모장을 열고 '이번 체험단으로 얻고 싶은 것'을 한 줄로 적어본다.\n\n**그 한 줄 옆에 평일 한가한 요일과 시간대도 같이 적어두자.** 다음 모집 공고를 쓸 때 그대로 옮겨 쓸 수 있고, 끝난 뒤 돌아볼 기준도 된다.",
+        "photo_query": "hand holding smartphone in cafe"
+      }
+    ],
+    "caption": "체험단은 후기 수보다\n목표가 먼저예요\n\n동네 가게 마케팅 수업 16교시 정리\n✔️ 체험단 전에 목표부터 한 줄 적는다\n✔️ 제공 메뉴는 평소 손님이 먹는 구성으로\n✔️ 가이드라인은 필수 항목 두세 개만\n✔️ 방문 시간은 한가한 때로 나눠 잡는다\n\n📝 오늘의 숙제\n오늘은 목표 한 줄만 메모장에 적자\n\n저장해두고 필요할 때 꺼내 보세요\n\n#자영업자 #소상공인 #사장님 #체험단 #체험단운영 #가게마케팅 #카페사장 #식당마케팅",
+    "photos": [
+      {
+        "slide": "cover",
+        "id": "pb:8544672",
+        "provider": "Pixabay",
+        "photographer": "BKjaev",
+        "url": "https://pixabay.com/photos/sunset-phone-capture-view-scenery-8544672/",
+        "query": "cafe owner looking at smartphone"
+      },
+      {
+        "slide": "s1",
+        "id": "pb:1869820",
+        "provider": "Pixabay",
+        "photographer": "Pexels",
+        "url": "https://pixabay.com/photos/coffee-computer-cup-desk-drink-1869820/",
+        "query": "notebook pen on wooden table"
+      },
+      {
+        "slide": "s2",
+        "id": "pb:4282020",
+        "provider": "Pixabay",
+        "photographer": "guillermomuro00",
+        "url": "https://pixabay.com/photos/platting-fine-dining-vegan-4282020/",
+        "query": "chef plating dish closeup"
+      },
+      {
+        "slide": "s3",
+        "id": "pb:865116",
+        "provider": "Pixabay",
+        "photographer": "picjumbo_com",
+        "url": "https://pixabay.com/photos/child-kid-play-study-color-learn-865116/",
+        "query": "hand writing checklist paper"
+      },
+      {
+        "slide": "s4",
+        "id": "pb:4048225",
+        "provider": "Pixabay",
+        "photographer": "tianya1223",
+        "url": "https://pixabay.com/photos/ikea-table-dining-chair-lamp-4048225/",
+        "query": "empty restaurant tables afternoon"
+      },
+      {
+        "slide": "s5",
+        "id": "pb:1192032",
+        "provider": "Pixabay",
+        "photographer": "janeb13",
+        "url": "https://pixabay.com/photos/girl-smartphone-iphone-1192032/",
+        "query": "hand holding smartphone in cafe"
+      }
+    ],
+    "missing_photos": 0,
+    "overflow_slides": [],
+    "images": [
+      "out/2026-11-25/01.jpg",
+      "out/2026-11-25/02.jpg",
+      "out/2026-11-25/03.jpg",
+      "out/2026-11-25/04.jpg",
+      "out/2026-11-25/05.jpg",
+      "out/2026-11-25/06.jpg",
+      "out/2026-11-25/07.jpg"
+    ],
+    "publish_at": "2026-11-25T19:10:00+09:00",
+    "approved": false,
+    "status": "pending"
+  }
+}
