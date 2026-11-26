@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-27",
+  "threads": [
+    {
+      "slot": "morning",
+      "type": "news",
+      "publish_at": "2026-11-27T08:10:00+09:00",
+      "pillar": "소상공인연합회 노동관계법 개정 중단 촉구 기사 → 사람 쓰는 사장의 인건비 속마음",
+      "text": "소상공인연합회가 노동관계법 개정 추진을 멈춰달라고 촉구했다는 기사 봤어?\n\n세부 내용은 원문을 봐야 알겠지만\n보다 보니 이 생각이 먼저 들더라.\n\n직원 월급날은 매출 들어오는 날보다 꼭 먼저 오는 느낌.\n\n한 명 더 쓸까, 내가 더 뛸까.\n계산기 두드리다 조용히 접은 날, 다들 한 번쯤 있잖아.\n\n사람 쓰는 사장님들, 요즘 제일 무거운 고민이 뭐야?",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "noon",
+      "type": "recruit",
+      "publish_at": "2026-11-27T12:20:00+09:00",
+      "pillar": "내가 일하는 방식 소개형: 새싹·줄기·열매 정기 관리 3단계",
+      "text": "새싹, 줄기, 열매. 내 정기 관리는 세 단계로 나뉘어 있어.\n\n새싹: 월 4회 소식 작성, 리뷰 답글 가이드, 월간 통계, 컨설팅\n줄기: 플레이스 대리운영, A/B테스트, 시즌 제안\n열매: 플레이스 광고 운영, 단골 재방문 설계\n\n어디까지 필요한지는 가게마다 달라.\n그래서 먼저 플레이스를 보고 말해줄게.\n\n프로필 링크(홈페이지)에서 무료 플레이스 진단 신청해줘.\n비용은 상담 후 가게 규모에 맞춰 안내해.",
+      "approved": false,
+      "status": "pending"
+    },
+    {
+      "slot": "evening",
+      "type": "empathy",
+      "publish_at": "2026-11-27T20:40:00+09:00",
+      "pillar": "쉬는 날에도 가게 생각이 떠나지 않는 마음",
+      "text": "쉬는 날인데 손은 또 가게 앱을 열고 있어.\n\n영화 보다가 재고가 떠오르고,\n밥 먹다가 내일 오픈 준비 순서를 외우고,\n산책하다가 어제 그 손님 표정이 생각나고.\n\n몸은 쉬는데 머리는 출근 중인 거.\n\n근데 그만큼 가게를 아끼고 있다는 뜻이기도 해.\n\n너는 쉬는 날 제일 먼저 떠오르는 가게 생각이 뭐야?",
+      "approved": false,
+      "status": "pending"
+    }
+  ],
+  "carousel": {
+    "topic": "배민 소상공인 지원 확대, 우리 가게가 받을 수 있는지 확인하는 체크리스트",
+    "episode": 17,
+    "kicker": "동네 가게 마케팅 수업 17교시 · 이슈 특강",
+    "news_based": "배민, 금융·판로·수수료 지원 확대...소상공인 상생 접점 넓힌다",
+    "cover": {
+      "title": "배민 지원 확대,\n우리 가게도 될까",
+      "photo_query": "cafe owner looking at smartphone"
+    },
+    "sections": [
+      {
+        "heading": "조건은 기사 말고 공식 공고로 본다",
+        "body": "배민이 금융·판로·수수료 지원을 넓힌다는 소식이 나왔다. 다만 대상과 조건은 기사 제목만으로는 알 수 없다.\n\n**조건은 기사 댓글이 아니라 배민 공식 공고에서 확인한다.** 사장님용 공지나 안내 메뉴에서 관련 글을 찾고, 제목을 캡처해 두면 된다.",
+        "photo_query": "hand holding smartphone in cafe"
+      },
+      {
+        "heading": "수수료는 지금 정산 내역이 기준선이다",
+        "body": "지원이 수수료 쪽이라면 내가 지금 얼마를 내고 있는지부터 알아야 한다. 정산 내역에서 최근 한 달 치를 열어 항목별로 훑어본다.\n\n**바뀐 뒤에 비교할 기준선은 지금의 정산 내역이다.** 화면을 캡처하거나 엑셀에 옮겨 두면 나중에 달라졌는지 확인하기 쉽다.",
+        "photo_query": "calculator and receipts on counter"
+      },
+      {
+        "heading": "금융 지원은 서류부터 한 폴더에 모은다",
+        "body": "금융 지원이 있다고 해서 모두에게 해당하진 않을 수 있다. 자격과 함께 갚아야 하는 돈인지도 공식 공고에서 읽어야 한다.\n\n**신청 전에 미리 할 일은 사업자 정보와 지금의 자금 현황을 정리해 두는 것이다.** 서류가 필요할 수 있으니 사업자등록증 사본부터 폴더에 모아 둔다.",
+        "photo_query": "folder of documents on desk"
+      },
+      {
+        "heading": "판로가 넓어지기 전에 대표 메뉴를 손본다",
+        "body": "판로가 넓어진다면 새 손님이 처음 만나는 곳은 배달앱의 가게 화면이다. 대표 메뉴 사진과 소개, 영업시간이 지금 맞는지 본다.\n\n**신청이 열린 날 서두르기보다 대표 메뉴 세 개의 사진과 설명을 미리 손봐 둔다.** 품절된 메뉴가 그대로 남아 있지는 않은지도 함께 확인한다.",
+        "photo_query": "chef plating dish closeup"
+      },
+      {
+        "heading": "오늘의 숙제: 공지 한 건만 찾아 저장",
+        "body": "오늘은 딱 하나만 한다. 배민 사장님용 공지에서 이번 지원과 관련된 글을 찾아 제목과 링크를 메모장에 저장한다.\n\n**우리 가게가 대상인지는 공식 공고를 직접 읽고 판단한다.** 해당되지 않으면 지워도 되고, 해당되면 그때 서류를 준비하면 된다.",
+        "photo_query": "restaurant owner writing notes notebook"
+      }
+    ],
+    "caption": "기사만 봐서는 조건을 몰라요\n공식 공고부터 확인하세요\n\n동네 가게 마케팅 수업 17교시 · 이슈 특강 정리\n✔️ 조건은 기사 말고 공식 공고로 본다\n✔️ 수수료는 지금 정산 내역이 기준선이다\n✔️ 금융 지원은 서류부터 한 폴더에 모은다\n✔️ 판로가 넓어지기 전에 대표 메뉴를 손본다\n\n📝 오늘의 숙제\n오늘의 숙제: 공지 한 건만 찾아 저장\n\n📰 참고: 팝콘뉴스 보도 · 세부 조건은 공식 공고를 꼭 확인하세요\n\n📤 주변 사장님한테도 공유해 주세요\n이런 소식은 아는 사람만 챙겨요\n\n🔔 다음 소식도 놓치지 않게 @cml.place 팔로우\n\n#자영업자 #소상공인 #사장님 #배민 #배달앱 #수수료 #소상공인지원 #가게운영",
+    "photos": [
+      {
+        "slide": "cover",
+        "id": "pb:6616754",
+        "provider": "Pixabay",
+        "photographer": "Surprising_Media",
+        "url": "https://pixabay.com/photos/woman-model-portrait-pose-style-6616754/",
+        "query": "cafe owner looking at smartphone"
+      },
+      {
+        "slide": "s1",
+        "id": "pb:1851218",
+        "provider": "Pixabay",
+        "photographer": "Pexels",
+        "url": "https://pixabay.com/photos/hands-phone-smartphone-electronics-1851218/",
+        "query": "hand holding smartphone in cafe"
+      },
+      {
+        "slide": "s2",
+        "id": "pb:4542292",
+        "provider": "Pixabay",
+        "photographer": "Panals",
+        "url": "https://pixabay.com/photos/receipts-tax-office-bank-notes-4542292/",
+        "query": "calculator and receipts on counter"
+      },
+      {
+        "slide": "s3",
+        "id": "pb:2106924",
+        "provider": "Pixabay",
+        "photographer": "Geisteskerker",
+        "url": "https://pixabay.com/photos/bureaucracy-file-folder-paperwork-2106924/",
+        "query": "folder of documents on desk"
+      },
+      {
+        "slide": "s4",
+        "id": "pb:569072",
+        "provider": "Pixabay",
+        "photographer": "JESHOOTS-com",
+        "url": "https://pixabay.com/photos/penne-pasta-plate-pasta-plate-569072/",
+        "query": "chef plating dish closeup"
+      },
+      {
+        "slide": "s5",
+        "id": "pb:594090",
+        "provider": "Pixabay",
+        "photographer": "StartupStockPhotos",
+        "url": "https://pixabay.com/photos/startup-meeting-brainstorming-594090/",
+        "query": "restaurant owner writing notes notebook"
+      }
+    ],
+    "missing_photos": 0,
+    "overflow_slides": [],
+    "images": [
+      "out/2026-11-27/01.jpg",
+      "out/2026-11-27/02.jpg",
+      "out/2026-11-27/03.jpg",
+      "out/2026-11-27/04.jpg",
+      "out/2026-11-27/05.jpg",
+      "out/2026-11-27/06.jpg",
+      "out/2026-11-27/07.jpg"
+    ],
+    "publish_at": "2026-11-27T19:10:00+09:00",
+    "approved": false,
+    "status": "pending"
+  }
+}
